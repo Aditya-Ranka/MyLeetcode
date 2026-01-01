@@ -4,7 +4,7 @@ All the questions I go through and my approach and understanding of each questio
 # LeetCode Solutions (C++)
 
 ## 📊 Progress
-- Total Solved: 12
+- Total Solved: 14
 - Language: C++
 
 ## 📁 Problems
@@ -23,3 +23,5 @@ All the questions I go through and my approach and understanding of each questio
 | 704 | Binary Search | Binary Search | Easy | [Link](Binary_Search/704_BinarySearch.cpp) |
 | 74 | Search a 2D Matrix | Binary Search | Medium | [Link](Binary_Search/074_SearchA2DMatrix.cpp) |
 | 153 | Find Minimum in Rotated Sorted Array | Binary Search | Medium | [Link](Binary_Search/153_FindMinimumInRotatedSortedArray.cpp) |
+| 338 | Counting Bits | Bit Manipulation | Easy | [Link](Bit_Manipulation/338_CountingBits.cpp) |
+| 190 | Reverse Bits | Bit Manipulation | Easy | [Link](Bit_Manipulation/190_ReverseBits.cpp) |
