@@ -4,7 +4,7 @@ All the questions I go through and my approach and understanding of each questio
 # LeetCode Solutions (C++)
 
 ## 📊 Progress
-- Total Solved: 29
+- Total Solved: 30
 - Language: C++
 
 ## 📁 Problems
@@ -18,6 +18,7 @@ All the questions I go through and my approach and understanding of each questio
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | [Link](Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
 | 53 | Maximum Subarray | Arrays | Medium | [Link](Arrays/053_MaximumSubarray.cpp) |
 | 66 | Plus One | Arrays | Easy | [Link](Arrays/066_PlusOne.cpp) |
+| 1752 | Check if Array Is Sorted and Rotated | Arrays | Easy | [Link](Arrays/1752_CheckIfArrayIsSortedAndRotated.cpp) |
 | 238 | Product of Array Except Self | Arrays | Medium | [Link](Arrays/238_ProductOfArrayExceptSelf.cpp) |
 | 269 | Missing Number | Arrays | Easy | [Link](Arrays/269_MissingNumber.cpp) |
 | 283 | Move Zeroes | Arrays | Easy | [Link](Arrays/283_MoveZeroes.cpp) |
