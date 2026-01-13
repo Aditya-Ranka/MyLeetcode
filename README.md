@@ -8,20 +8,6 @@ All the questions I go through and my approach and understanding of each problem
 - **Status:** Actively updating
 - **Total Solved:** 31
 
----
-
-## 📁 Folder Structure
-
-MyLeetcode/
-├── 1-D_DP
-├── 2-D_DP
-├── Arrays
-├── Binary_Search
-├── Bit_Manipulation
-├── Hashing
-├── Math
-├── Two_Pointers
-└── README.md
 
 ---
 
