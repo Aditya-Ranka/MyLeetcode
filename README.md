@@ -6,7 +6,7 @@ All the questions I go through and my approach and understanding of each problem
 
 - **Language:** C++
 - **Status:** Actively updating
-- **Total Solved:** 33
+- **Total Solved:** 34
 
 ---
 
@@ -21,6 +21,7 @@ All the questions I go through and my approach and understanding of each problem
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | [Link](Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
 | 27 | Remove Element | Two Pointers | Easy | [Link](Two_Pointers/027_RemoveElement.cpp) |
 | 33 | Search in Rotated Sorted Array | Binary Search | Medium | [Link](Binary_Search/033_SearchInRotatedSortedArray.cpp) |
+| 35 | Search Insert Position | Array | Easy | [Link](Arrays/035_SearchInsertPosition.cpp) |
 | 49 | Group Anagrams | Hashing | Medium | [Link](Hashing/049_GroupAnagrams.cpp) |
 | 53 | Maximum Subarray | Arrays | Medium | [Link](Arrays/053_MaximumSubarray.cpp) |
 | 66 | Plus One | Arrays | Easy | [Link](Arrays/066_PlusOne.cpp) |
