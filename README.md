@@ -6,7 +6,7 @@ All the questions I go through and my approach and understanding of each problem
 
 - **Language:** C++
 - **Status:** Actively updating
-- **Total Solved:** 32
+- **Total Solved:** 33
 
 ---
 
@@ -27,6 +27,7 @@ All the questions I go through and my approach and understanding of each problem
 | 69 | Sqrt(x) | Binary Search | Easy | [Link](Binary_Search/069_Sqrt(x).cpp) |
 | 70 | Climbing Stairs | 1-D DP | Easy | [Link](1-D_DP/070_ClimbingStairs.cpp) |
 | 74 | Search a 2D Matrix | Binary Search | Medium | [Link](Binary_Search/074_SearchA2DMatrix.cpp) |
+| 88 | Merge Sorted Array | Array | Easy | [Link](Arrays/088_MergeSortedArray.cpp) |
 | 121 | Best Time to Buy and Sell Stock | Two Pointers | Easy | [Link](Two_Pointers/BestTimeToBuyAndSellStock.cpp) |
 | 125 | Valid Palindrome | Two Pointers | Easy | [Link](Two_Pointers/125_ValidPalindrome.cpp) |
 | 136 | Single Number | Bit Manipulation | Easy | [Link](Bit_Manipulation/136_SingleNumber.cpp) |
