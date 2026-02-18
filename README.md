@@ -48,5 +48,3 @@ All the questions I go through and my approach and understanding of each problem
 | 1143 | Longest Common Subsequence | 2-D DP | Medium | [Link](2-D_DP/1143_LongestCommonSubsequence.cpp) |
 
 ---
-
-⭐ More problems coming soon. Consistency > intensity.
