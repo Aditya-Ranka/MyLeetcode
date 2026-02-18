@@ -6,8 +6,7 @@ All the questions I go through and my approach and understanding of each problem
 
 - **Language:** C++
 - **Status:** Actively updating
-- **Total Solved:** 31
-
+- **Total Solved:** 32
 
 ---
 
@@ -20,6 +19,7 @@ All the questions I go through and my approach and understanding of each problem
 | 11 | Container With Most Water | Two Pointers | Medium | [Link](Two_Pointers/011_ContainerWithMostWater.cpp) |
 | 15 | 3Sum | Two Pointers | Medium | [Link](Two_Pointers/015_3Sum.cpp) |
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | [Link](Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
+| 27 | Remove Element | Two Pointers | Easy | [Link](Two_Pointers/027_RemoveElement.cpp) |
 | 33 | Search in Rotated Sorted Array | Binary Search | Medium | [Link](Binary_Search/033_SearchInRotatedSortedArray.cpp) |
 | 49 | Group Anagrams | Hashing | Medium | [Link](Hashing/049_GroupAnagrams.cpp) |
 | 53 | Maximum Subarray | Arrays | Medium | [Link](Arrays/053_MaximumSubarray.cpp) |
@@ -48,3 +48,5 @@ All the questions I go through and my approach and understanding of each problem
 | 1143 | Longest Common Subsequence | 2-D DP | Medium | [Link](2-D_DP/1143_LongestCommonSubsequence.cpp) |
 
 ---
+
+⭐ More problems coming soon. Consistency > intensity.
