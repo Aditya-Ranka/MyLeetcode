@@ -6,7 +6,7 @@ All the questions I go through and my approach and understanding of each problem
 
 - **Language:** C++
 - **Status:** Actively updating
-- **Total Solved:** 34
+- **Total Solved:** 35
 
 ---
 
@@ -17,6 +17,7 @@ All the questions I go through and my approach and understanding of each problem
 | 1 | Two Sum | Hashing | Easy | [Link](Hashing/001_TwoSum.cpp) |
 | 9 | Palindrome Number | Math | Easy | [Link](Math/009_PalindromeNumber.cpp) |
 | 11 | Container With Most Water | Two Pointers | Medium | [Link](Two_Pointers/011_ContainerWithMostWater.cpp) |
+| 13 | Roman to Integer | Hash Table | Easy | [Link](Hashing/013_RomanToInteger.cpp) |
 | 15 | 3Sum | Two Pointers | Medium | [Link](Two_Pointers/015_3Sum.cpp) |
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | [Link](Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
 | 27 | Remove Element | Two Pointers | Easy | [Link](Two_Pointers/027_RemoveElement.cpp) |
