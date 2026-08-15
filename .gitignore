@@ -1,0 +1,7 @@
+# LeetCode sync secrets — never commit
+sync/.env
+sync/__pycache__/
+sync/state.json
+*.pyc
+.DS_Store
+sync/submissions.json

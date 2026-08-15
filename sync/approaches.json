@@ -1,0 +1,379 @@
+{
+  "2": {
+    "approach": [
+      "Elementary-school addition over two linked lists, digit by digit, carrying as you go.",
+      "Use a dummy head so the first node needs no special case; `tail` tracks the last appended node.",
+      "Loop while either list has nodes OR carry != 0; take each digit (0 if a list is exhausted), sum = x + y + carry.",
+      "Store sum%10 in a new node, carry = sum/10; return dummy->next."
+    ],
+    "time": "O(max(m, n))",
+    "space": "O(max(m, n)) for the result list"
+  },
+  "4": {
+    "approach": [
+      "Binary search the partition point, always on the SMALLER array, so it runs in O(log(min(m,n))).",
+      "For a cut m in nums1 and n = (a+b)//2 - m in nums2, compute the 4 border values left1/right1/left2/right2 with -inf/+inf sentinels at the edges.",
+      "A partition is valid when left1 <= right2 and left2 <= right1.",
+      "Even total -> average of max(lefts) and min(rights); odd total -> min(rights).",
+      "If left1 > right2 move the cut left, else move it right."
+    ],
+    "comments": [
+      "`flag` distinguishes even vs odd total length."
+    ],
+    "time": "O(log(min(m, n)))",
+    "space": "O(1)"
+  },
+  "7": {
+    "approach": [
+      "Pop digits off the end with %10 and rebuild the reversed number, x = x/10 each step.",
+      "Before doing y = y*10 + t, check against INT_MAX/INT_MIN/10 bounds and bail out with 0 on overflow.",
+      "Negatives work directly because C++ / and % keep the sign of the dividend."
+    ],
+    "time": "O(log10(x))",
+    "space": "O(1)"
+  },
+  "18": {
+    "approach": [
+      "Generalized kSum by recursion: sort, then recursively fix one index at a time until k == 2.",
+      "`quad` holds the currently fixed numbers; skip duplicates at each level to avoid repeated results.",
+      "Base case k == 2 is a two-pointer scan from both ends toward the remaining target, skipping duplicate left values after a hit."
+    ],
+    "time": "O(n^3)",
+    "space": "O(n) recursion depth + output"
+  },
+  "19": {
+    "approach": [
+      "Two-pointer gap method with a dummy node before head (handles removing the head itself).",
+      "Advance the fast pointer r by n-1 steps first.",
+      "Then move l (from dummy) and r together until r is the last node; l is now just before the target.",
+      "Unlink with l->next = l->next->next."
+    ],
+    "time": "O(L)",
+    "space": "O(1)"
+  },
+  "20": {
+    "approach": [
+      "Push every opening bracket onto a stack.",
+      "On a closing bracket, fail if the stack is empty or its top isn't the matching opener; otherwise pop.",
+      "Valid iff the stack is empty at the end."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "31": {
+    "approach": [
+      "Scan from the right for the first i with nums[i] < nums[i+1] (the pivot).",
+      "If a pivot exists, find the rightmost j > i with nums[j] > nums[i] and swap them.",
+      "Reverse the suffix after i so it becomes ascending (smallest arrangement) -> the next permutation.",
+      "No pivot means it's the last permutation; reversing the whole array wraps to the first."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "34": {
+    "approach": [
+      "Two binary searches over the sorted array.",
+      "findFirst: on a match, record mid and keep searching LEFT (r = mid-1).",
+      "findEnd: on a match, record mid and keep searching RIGHT (l = mid+1).",
+      "Return [first, last]; both -1 when the target is absent."
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "36": {
+    "approach": [
+      "Track seen digits per row, per column, and per 3x3 box with hash sets (box keyed by (i//3, j//3)).",
+      "Skip '.' cells; for a filled cell, it's invalid if the value already appears in its row/col/box set.",
+      "Otherwise add it to all three sets."
+    ],
+    "time": "O(1) (fixed 9x9 board)",
+    "space": "O(1)"
+  },
+  "48": {
+    "approach": [
+      "Rotate 90 degrees clockwise via a helper matrix.",
+      "Build the transpose: m1[j][i] = matrix[i][j].",
+      "Write back reversing each row: matrix[i][j] = m1[i][n-1-j]."
+    ],
+    "comments": [
+      "Uses O(n^2) extra space; the in-place transpose + row-reverse variant is O(1)."
+    ],
+    "time": "O(n^2)",
+    "space": "O(n^2)"
+  },
+  "54": {
+    "approach": [
+      "Keep four shrinking boundaries: left, right, top, bottom.",
+      "Each layer: top row L->R (top++), right column T->B (right--), guard-check, bottom row R->L (bottom--), left column B->T (left++).",
+      "The inner guard `if not (left<right and top<bottom): break` avoids re-reading a middle row/column on odd sizes."
+    ],
+    "time": "O(m*n)",
+    "space": "O(1) extra"
+  },
+  "56": {
+    "approach": [
+      "Sort intervals by start.",
+      "If the current interval starts within the last merged one (st <= res[-1][1]), extend its end to max(end, current end).",
+      "Otherwise it's disjoint -> append as a new interval."
+    ],
+    "time": "O(n log n)",
+    "space": "O(n) output"
+  },
+  "61": {
+    "approach": [
+      "Walk to the tail counting length, then close the list into a cycle (tail->next = head).",
+      "Effective rotation is k % length; the new tail is (length - k%length) steps from the old tail.",
+      "Step forward that many times, set new head = curr->next, then break the cycle (curr->next = NULL)."
+    ],
+    "time": "O(L)",
+    "space": "O(1)"
+  },
+  "73": {
+    "approach": [
+      "First pass records which rows and columns contain a 0 into two sets.",
+      "Second pass zeroes any cell whose row or column was marked.",
+      "Two passes avoid a freshly written 0 cascading into more zeros."
+    ],
+    "comments": [
+      "O(m+n) extra space; the O(1) version reuses the first row/column as markers."
+    ],
+    "time": "O(m*n)",
+    "space": "O(m+n)"
+  },
+  "75": {
+    "approach": [
+      "Counting sort over the three values: count how many 0s, 1s, 2s.",
+      "Overwrite the array in place: the 0s, then the 1s, then the 2s."
+    ],
+    "comments": [
+      "Two-pass counting; the one-pass Dutch National Flag (three pointers) also works."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "81": {
+    "approach": [
+      "Rotated binary search that tolerates duplicates.",
+      "When nums[l]==nums[mid] or nums[r]==nums[mid] you can't tell which half is sorted, so shrink that end by one (this is what makes the worst case O(n)).",
+      "Otherwise find the sorted half (nums[l] < nums[mid] => left sorted) and check whether target lies inside it to pick a side."
+    ],
+    "time": "O(log n) average, O(n) worst",
+    "space": "O(1)"
+  },
+  "83": {
+    "approach": [
+      "Single pass; because the list is sorted, duplicates are adjacent.",
+      "When curr->val == curr->next->val, splice out and delete the next node; otherwise advance curr."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "118": {
+    "approach": [
+      "Build row by row starting from [[1]].",
+      "Pad the previous row with a 0 on each side; each new entry is temp[j] + temp[j+1]."
+    ],
+    "time": "O(numRows^2)",
+    "space": "O(numRows^2) output"
+  },
+  "128": {
+    "approach": [
+      "Put all numbers in a set for O(1) lookup.",
+      "Only start counting a run at a number whose predecessor (num-1) is absent -> a sequence start.",
+      "Extend while num+length is in the set; track the best length.",
+      "Each number is touched at most twice, so it's O(n)."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "141": {
+    "approach": [
+      "Floyd's tortoise & hare: slow moves 1 step, fast moves 2.",
+      "If there's a cycle the fast pointer laps and meets slow; if fast hits the end there's no cycle."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "162": {
+    "approach": [
+      "Binary search on the slope; a peak is guaranteed by the nums[-1]=nums[n]=-inf framing.",
+      "Handle both ends up front (strictly greater than the lone neighbor => peak).",
+      "If the left neighbor is larger, a peak exists to the left (r=m); if the right neighbor is larger, one exists to the right (l=m); if both neighbors are smaller, mid is a peak."
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "169": {
+    "approach": [
+      "Boyer-Moore voting: keep a candidate and a count.",
+      "When count hits 0, adopt the current number; +1 when it matches the candidate, -1 otherwise.",
+      "The > n/2 element survives as the candidate."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "189": {
+    "approach": [
+      "k %= n so rotations wrap.",
+      "Stash the last k elements, shift the first n-k elements right by k (iterate from the back to avoid overwrite), then drop the stashed elements into the front."
+    ],
+    "comments": [
+      "O(k) extra; the triple-reverse trick does it in O(1) space."
+    ],
+    "time": "O(n)",
+    "space": "O(k)"
+  },
+  "229": {
+    "approach": [
+      "Extended Boyer-Moore for > n/3 elements: at most two can qualify, so track two candidates and two counts.",
+      "Run the usual vote update, then a verification pass (nums.count) confirms each candidate actually exceeds n/3."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "347": {
+    "approach": [
+      "Count frequencies in a hash map.",
+      "Bucket sort by frequency: buckets[f] holds all values seen f times (max frequency is n).",
+      "Walk buckets from high frequency down, collecting until k values are gathered.",
+      "Avoids the O(n log n) of a heap/sort."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "485": {
+    "approach": [
+      "Single-pass counter: +1 on a 1 and track the max; reset to 0 on any non-1."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "493": {
+    "approach": [
+      "Count reverse pairs (i<j with nums[i] > 2*nums[j]) as a by-product of merge sort.",
+      "After recursing on both halves, countPairs sweeps the two sorted halves with a moving pointer to count valid pairs.",
+      "The standard merge then sorts the range so parent calls see sorted halves."
+    ],
+    "time": "O(n log n)",
+    "space": "O(n)"
+  },
+  "509": {
+    "approach": [
+      "Plain recursion straight off F(n) = F(n-1) + F(n-2) with base cases."
+    ],
+    "comments": [
+      "Exponential without memoization; an iterative/DP version is O(n). n=0 and n=1 handled explicitly."
+    ],
+    "time": "O(2^n) (naive recursion)",
+    "space": "O(n) recursion depth"
+  },
+  "540": {
+    "approach": [
+      "Binary search on index parity: in a fully paired sorted array, pairs start at even indices; the single element breaks that parity.",
+      "Use the segment sizes around mid to decide which half still pairs evenly and move toward the half where the parity is broken."
+    ],
+    "comments": [
+      "The code special-cases the small windows right around mid explicitly."
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "560": {
+    "approach": [
+      "Prefix sum + hash map of prefix-sum frequencies, seeded with {0:1}.",
+      "For running prefix p, the number of subarrays ending here with sum k is how many times (p-k) has appeared.",
+      "Add that to the answer, then record p."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "645": {
+    "approach": [
+      "One pass with a set finds the duplicated number y and the running total.",
+      "Missing z = ideal_sum(1..n) + y - actual_total (adding y back cancels the duplicate's double count).",
+      "Return [duplicate, missing]."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "875": {
+    "approach": [
+      "Binary search on the eating speed (the answer), range [1, max(pile)].",
+      "For speed m, hours = sum(ceil(pile/m)); feasible if <= h.",
+      "Feasible -> try slower (r=m-1); else faster (l=m+1). l converges to the minimum workable speed."
+    ],
+    "time": "O(n log(max pile))",
+    "space": "O(1)"
+  },
+  "1011": {
+    "approach": [
+      "Binary search on ship capacity, range [max(weight), sum(weights)].",
+      "willItCarry simulates loading day by day for a candidate capacity and reports whether it fits within `days`.",
+      "Feasible -> shrink capacity; else grow. l is the minimum feasible capacity."
+    ],
+    "time": "O(n log(sum))",
+    "space": "O(1)"
+  },
+  "1283": {
+    "approach": [
+      "Binary search on the divisor, range [1, max(nums)].",
+      "For divisor m the cost is sum(ceil(num/m)); feasible when <= threshold.",
+      "Feasible -> try a smaller divisor; else larger. l is the smallest divisor meeting the threshold."
+    ],
+    "time": "O(n log(max))",
+    "space": "O(1)"
+  },
+  "1482": {
+    "approach": [
+      "If m*k > number of flowers it's impossible (-1).",
+      "Binary search on days, range [1, max(bloomDay)]; getCount greedily counts complete bouquets of k adjacent bloomed flowers by a candidate day.",
+      "Enough bouquets -> try fewer days; else more. l is the answer."
+    ],
+    "time": "O(n log(max bloom))",
+    "space": "O(1)"
+  },
+  "1539": {
+    "approach": [
+      "Binary search: at index i, arr[i]-i-1 is how many positive integers are missing before arr[i].",
+      "Find the boundary where the missing count first reaches k; the answer is l + k."
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "1552": {
+    "approach": [
+      "Sort positions, then binary search on the minimum gap (force), range [1, (max-min)//(m-1)].",
+      "willItWork greedily places balls at least `mid` apart and checks whether all m fit.",
+      "Feasible -> try a larger gap (l=mid+1); else smaller. Answer is l-1 (largest feasible minimum gap)."
+    ],
+    "time": "O(n log(range))",
+    "space": "O(1)"
+  },
+  "1838": {
+    "approach": [
+      "Sort, then sliding window: making every element in the window equal to the largest (nums[r]) costs nums[r]*windowLen - windowSum.",
+      "Grow r; while the cost exceeds k, shrink from the left.",
+      "The largest valid window size is the answer."
+    ],
+    "time": "O(n log n)",
+    "space": "O(1)"
+  },
+  "2149": {
+    "approach": [
+      "Result array with two write pointers: positives to even indices (0,2,4,...), negatives to odd indices (1,3,5,...).",
+      "Single pass preserves relative order within each sign."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "69": {
+    "approach": [
+      "Binary search for the largest integer whose square does not exceed x, over the range [1, x/2].",
+      "Use a long for mid*mid to avoid 32-bit overflow; return mid immediately on an exact square.",
+      "If mid*mid < x, record mid as the best answer so far and search right; otherwise search left.",
+      "x < 2 is handled directly (sqrt of 0 or 1 is x itself)."
+    ],
+    "time": "O(log x)",
+    "space": "O(1)"
+  }
+}
