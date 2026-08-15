@@ -17,6 +17,7 @@ Output: sync/submissions.json  (list of problem records; see build_record()).
 """
 import argparse
 import json
+import os
 import pathlib
 import sys
 import time
@@ -31,15 +32,21 @@ PREFER = ("cpp", "python3", "python", "java", "c")
 
 
 def load_env(path=ENV_PATH):
-    if not path.exists():
-        sys.exit(f"Missing {path}\n  -> cp {HERE/'.env.example'} {path} and fill it in.")
+    """Read config from sync/.env if present, then let real environment variables
+    override (so GitHub Actions can pass secrets without writing a .env file)."""
     env = {}
-    for line in path.read_text().splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        k, _, v = line.partition("=")
-        env[k.strip()] = v.strip()
+    if path.exists():
+        for line in path.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, _, v = line.partition("=")
+            env[k.strip()] = v.strip()
+    for k in ("LEETCODE_SESSION", "LEETCODE_CSRFTOKEN", "LEETCODE_USERNAME"):
+        if os.environ.get(k):
+            env[k] = os.environ[k]
+    if not env.get("LEETCODE_SESSION") or not env.get("LEETCODE_CSRFTOKEN"):
+        sys.exit("Set LEETCODE_SESSION and LEETCODE_CSRFTOKEN (in sync/.env or as env vars).")
     return env
 
 

@@ -1,0 +1,54 @@
+name: Daily LeetCode Sync
+
+on:
+  schedule:
+    # 05:30 UTC daily (~11:00 IST). Change this to your preferred time (cron is UTC).
+    - cron: "30 5 * * *"
+  workflow_dispatch: {}   # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write         # allow the job to commit + push new solutions
+
+concurrency:
+  group: daily-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r sync/requirements.txt
+
+      - name: Fetch accepted submissions
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          LEETCODE_CSRFTOKEN: ${{ secrets.LEETCODE_CSRFTOKEN }}
+          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
+        run: python3 sync/fetcher.py --mode backlog
+
+      - name: Generate approach write-ups for new problems
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 sync/approach_gen.py
+
+      - name: Assemble repo + regenerate README
+        run: python3 sync/builder.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "Daily sync: new solutions + README [skip ci]"
+            git push
+          else
+            echo "No changes today."
+          fi
