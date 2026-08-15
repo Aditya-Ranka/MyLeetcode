@@ -35,7 +35,10 @@ jobs:
 
       - name: Generate approach write-ups for new problems
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # Free, OpenAI-compatible. Defaults below are Groq; edit to switch providers.
+          LLM_BASE_URL: https://api.groq.com/openai/v1
+          LLM_MODEL: llama-3.3-70b-versatile
         run: python3 sync/approach_gen.py
 
       - name: Assemble repo + regenerate README
