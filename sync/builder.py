@@ -234,7 +234,7 @@ def write_readme(by_num):
         "All the questions I go through and my approach and understanding of each problem.", "",
         "## 🚀 LeetCode Solutions", "",
         "- **Languages:** C++ & Python",
-        "- **Structure:** organized by [Striver's A2Z DSA](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) topics",
+        "- **Structure:** organized by DSA topic",
         "- **Status:** Actively updating",
         f"- **Total Solved:** {len(rows)}", "",
         "---", "",
