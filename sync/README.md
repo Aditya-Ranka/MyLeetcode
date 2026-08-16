@@ -36,6 +36,15 @@ commits new solutions automatically. It needs four **repo secrets**
 "Auth failed", grab a fresh `LEETCODE_SESSION` / `csrftoken` from
 leetcode.com (DevTools → Application → Cookies) and update the two repo secrets.
 
+### Throttling (403 / 429)
+LeetCode throttles bulk pagination, and GitHub's runner IPs get hit harder than
+your laptop does — a run can walk several pages and then take a `403`. The fetcher
+backs off and retries (5s → 10 → 20 → 40 → 80) on both `403` and `429`. If it is
+*still* throttled after six attempts it exits non-zero **without** rewriting
+`submissions.json`: pages arrive newest-first, so a truncated file would drop the
+title/difficulty/topics of your oldest problems and the regenerated README would
+lose those columns. Let the next day's run retry, or run it locally.
+
 ### Change the run time
 Edit the `cron:` line in `daily-sync.yml` (it's in **UTC**). You can also trigger
 a run any time from the repo's **Actions** tab → *Daily LeetCode Sync* → *Run workflow*.

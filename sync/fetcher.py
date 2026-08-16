@@ -29,6 +29,10 @@ ENV_PATH = HERE / ".env"
 STATE_PATH = HERE / "state.json"
 BASE = "https://leetcode.com"
 PREFER = ("cpp", "python3", "python", "java", "c")
+# Statuses that mean "slow down", not "stop": 429 is the documented rate limit,
+# and LeetCode also returns 403 partway through pagination when it throttles an
+# IP (hit on the GitHub Actions runner after ~6 pages).
+THROTTLE_STATUSES = (403, 429)
 
 
 def load_env(path=ENV_PATH):
@@ -88,20 +92,36 @@ def check_auth(s):
 
 def fetch_submissions_page(s, offset, limit):
     r = s.get(f"{BASE}/api/submissions/", params={"offset": offset, "limit": limit}, timeout=30)
-    if r.status_code == 429:
+    if r.status_code in THROTTLE_STATUSES:
         return None  # signal caller to back off
     r.raise_for_status()
     return r.json()
 
 
-def fetch_all_submissions(s, page_size=20, max_pages=500, delay=0.7, stop_before_ts=None):
-    """Paginate /api/submissions/ (newest first). Optionally stop once we pass stop_before_ts."""
+def fetch_all_submissions(s, page_size=20, max_pages=500, delay=0.7, stop_before_ts=None,
+                          max_attempts=6):
+    """Paginate /api/submissions/ (newest first). Optionally stop once we pass stop_before_ts.
+
+    Returns (submissions, complete). `complete` is False when throttling cut the walk
+    short, so the caller can refuse to overwrite a good submissions.json with a
+    truncated one (pages come newest-first, so a short read drops OLD problems).
+    """
     out, offset, pages = [], 0, 0
     while pages < max_pages:
-        j = fetch_submissions_page(s, offset, page_size)
+        j = None
+        for attempt in range(max_attempts):
+            if attempt:  # back off between attempts: 5, 10, 20, 40, 80s
+                wait = min(5 * 2 ** (attempt - 1), 120)
+                print(f"[fetch] throttled at offset {offset}; retrying in {wait}s "
+                      f"(attempt {attempt + 1}/{max_attempts})", file=sys.stderr)
+                time.sleep(wait)
+            j = fetch_submissions_page(s, offset, page_size)
+            if j is not None:
+                break
         if j is None:
-            time.sleep(5)
-            continue
+            print(f"[fetch] still throttled at offset {offset} after {max_attempts} attempts",
+                  file=sys.stderr)
+            return out, False
         dump = j.get("submissions_dump", [])
         if not dump:
             break
@@ -114,7 +134,7 @@ def fetch_all_submissions(s, page_size=20, max_pages=500, delay=0.7, stop_before
             break
         offset += page_size
         time.sleep(delay)
-    return out
+    return out, True
 
 
 def best_per_problem(subs, since_ts=None, prefer=PREFER):
@@ -206,8 +226,14 @@ def main():
     if args.mode == "daily" and since is None and STATE_PATH.exists():
         since = json.loads(STATE_PATH.read_text()).get("last_ts")
 
-    subs = fetch_all_submissions(s, max_pages=args.max_pages, stop_before_ts=since)
+    subs, complete = fetch_all_submissions(s, max_pages=args.max_pages, stop_before_ts=since)
     print(f"[fetch] {len(subs)} raw submissions", file=sys.stderr)
+    if not complete:
+        # Overwriting submissions.json with a short read would strip title/difficulty/
+        # topics for every problem we never reached, and builder.py regenerates the
+        # README from those fields. Leave the last good file alone and try again later.
+        sys.exit(f"Throttled before the full history was read — leaving {args.out} "
+                 "untouched. Re-run later (or locally, off the datacenter IP).")
 
     best = best_per_problem(subs, since_ts=since)
     print(f"[dedup] {len(best)} unique accepted problems"
