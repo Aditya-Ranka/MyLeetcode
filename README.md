@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 74
+- **Total Solved:** 76
 
 ---
 
@@ -17,6 +17,7 @@ All the questions I go through and my approach and understanding of each problem
 |---|---------|------|------------|------|----------|
 | 1 | Two Sum | Arrays | Easy | C++ | [Link](03_Arrays/001_TwoSum.cpp) |
 | 2 | Add Two Numbers | Linked List | Medium | C++ | [Link](06_Linked_List/002_AddTwoNumbers.cpp) |
+| 3 | Longest Substring Without Repeating Characters | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/003_LongestSubstringWithoutRepeatingCharacters.py) |
 | 4 | Median of Two Sorted Arrays | Binary Search | Hard | Python | [Link](04_Binary_Search/004_MedianOfTwoSortedArrays.py) |
 | 7 | Reverse Integer | Math | Medium | C++ | [Link](01_Math/007_ReverseInteger.cpp) |
 | 9 | Palindrome Number | Math | Easy | C++ | [Link](01_Math/009_PalindromeNumber.cpp) |
@@ -72,6 +73,7 @@ All the questions I go through and my approach and understanding of each problem
 | 322 | Coin Change | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/322_CoinChange.cpp) |
 | 338 | Counting Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/338_CountingBits.cpp) |
 | 347 | Top K Frequent Elements | Heaps | Medium | C++ | [Link](11_Heaps/347_TopKFrequentElements.cpp) |
+| 410 | Split Array Largest Sum | Dynamic Programming | Hard | Python | [Link](16_Dynamic_Programming/410_SplitArrayLargestSum.py) |
 | 485 | Max Consecutive Ones | Arrays | Easy | Python | [Link](03_Arrays/485_MaxConsecutiveOnes.py) |
 | 493 | Reverse Pairs | Arrays | Hard | Python | [Link](03_Arrays/493_ReversePairs.py) |
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |

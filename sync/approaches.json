@@ -375,5 +375,503 @@
     ],
     "time": "O(log x)",
     "space": "O(1)"
+  },
+  "9": {
+    "approach": [
+      "Check if input number is negative",
+      "Reverse the input number",
+      "Compare reversed number with original number"
+    ],
+    "comments": [
+      "Using long long to handle potential overflow when reversing the number"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "136": {
+    "approach": [
+      "Initialize result variable to 0",
+      "Iterate through each number in the input array",
+      "XOR each number with the result",
+      "Return the final result after iteration"
+    ],
+    "comments": [
+      "This solution relies on the XOR property that a ^ a = 0 and a ^ 0 = a, allowing it to cancel out duplicate numbers"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "26": {
+    "approach": [
+      "Initialize a counter and a previous value",
+      "Iterate through the input array",
+      "If current number is greater than previous, update previous and increment counter",
+      "Return the counter as the new length"
+    ],
+    "comments": [
+      "The initial value of c is set to a very low number to ensure the first element is always included"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "283": {
+    "approach": [
+      "Initialize a nonzero flag",
+      "Iterate through the array and move non-zero elements to the front",
+      "Fill the rest of the array with zeros"
+    ],
+    "comments": [
+      "This solution has a tradeoff between readability and performance, as it uses two separate loops to move non-zero elements and fill zeros, but achieves a linear time complexity"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "66": {
+    "approach": [
+      "Start from the end of the digits array",
+      "Increment each digit and check for carry",
+      "If no carry, return the updated array",
+      "If all digits have carry, add a new most significant digit"
+    ],
+    "comments": [
+      "The code handles the case where the input array represents the maximum possible number (e.g., [9,9,9]) by inserting a new digit at the beginning."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "242": {
+    "approach": [
+      "Check if input strings have the same length",
+      "Create two hash maps to store character frequencies",
+      "Iterate through both strings and update hash maps",
+      "Compare the two hash maps for equality"
+    ],
+    "comments": [
+      "Early length check avoids unnecessary hash map operations",
+      "Using unordered_map allows for efficient character frequency counting"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "217": {
+    "approach": [
+      "Create an empty hash set",
+      "Iterate through the input array",
+      "Check for duplicates in the set",
+      "Insert new elements into the set",
+      "Return true if a duplicate is found"
+    ],
+    "comments": [
+      "Using an unordered_set allows for efficient lookups with an average time complexity of O(1)"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "53": {
+    "approach": [
+      "Initialize current sum and max sum",
+      "Iterate through array",
+      "Reset current sum if negative",
+      "Update current sum and max sum"
+    ],
+    "comments": [
+      "This solution uses Kadane's algorithm, which is more efficient than a naive approach",
+      "It handles negative numbers by resetting the current sum when it becomes negative"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "152": {
+    "approach": [
+      "Initialize max with the first element of the array",
+      "Find the maximum single element in the array",
+      "Use dynamic programming to track the maximum and minimum product ending at each position",
+      "Update max with the maximum product found so far",
+      "Handle zero elements by resetting the current max and min products"
+    ],
+    "comments": [
+      "The initial max is updated to handle the case where the maximum product is a single element",
+      "The use of currMin and currMax allows the algorithm to handle negative numbers, which can become maximum products when multiplied by another negative number"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "153": {
+    "approach": [
+      "Initialize two pointers, left and right, to the start and end of the array",
+      "Perform binary search, calculating the middle index",
+      "Compare the middle element to the rightmost element to determine which half to search",
+      "Repeat until the left and right pointers converge"
+    ],
+    "comments": [
+      "The key insight is that if the middle element is greater than the rightmost element, the minimum must be in the right half",
+      "If the middle element is less than or equal to the rightmost element, the minimum could be in the left half or at the middle index"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "33": {
+    "approach": [
+      "Initialize two pointers, left and right, to the start and end of the array",
+      "Perform binary search, calculating the middle index and comparing the middle element to the target",
+      "Determine which half of the array is sorted and adjust the search space accordingly",
+      "Repeat the search process until the target is found or the search space is empty"
+    ],
+    "comments": [
+      "The code handles the edge case where the input array is empty by immediately returning -1",
+      "The use of 'l + (r-l)/2' instead of '(l+r)/2' avoids potential integer overflow issues"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "167": {
+    "approach": [
+      "Initialize two pointers, one at the start and one at the end of the array",
+      "Calculate the sum of the values at the two pointers",
+      "Compare the sum to the target and adjust the pointers accordingly",
+      "Repeat until the target sum is found"
+    ],
+    "comments": [
+      "The use of while(1==1) is unconventional and could be replaced with a more standard while loop condition",
+      "The function assumes that a solution will always be found, as per the problem statement"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "191": {
+    "approach": [
+      "initialize result variable",
+      "loop until all bits are processed",
+      "check least significant bit for 1",
+      "increment result if bit is 1",
+      "right shift to process next bit"
+    ],
+    "comments": [
+      "This solution uses a simple iterative approach, but it could be optimized using bitwise operations like Brian Kernighan's algorithm."
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "704": {
+    "approach": [
+      "Initialize left and right pointers to the start and end of the array",
+      "Calculate the middle index and compare the middle element to the target",
+      "Update the left or right pointer based on the comparison result",
+      "Repeat the process until the target is found or the search space is exhausted"
+    ],
+    "comments": [
+      "The use of 'l + (r-l)/2' instead of '(l+r)/2' avoids potential integer overflow"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "49": {
+    "approach": [
+      "Create a hashmap with character count as key",
+      "Count character frequency for each string",
+      "Store strings with same character count in hashmap",
+      "Iterate hashmap to construct result"
+    ],
+    "comments": [
+      "Assumes all strings are lowercase English letters",
+      "Uses array of size 26 to count character frequency, assuming only lowercase letters"
+    ],
+    "time": "O(n*m)",
+    "space": "O(n*m)"
+  },
+  "338": {
+    "approach": [
+      "Initialize a result vector with n+1 zeros",
+      "Iterate over the range from 0 to n",
+      "For each number, calculate its bit count using the previous bit count and the least significant bit",
+      "Store the calculated bit count in the result vector",
+      "Return the result vector"
+    ],
+    "comments": [
+      "The expression i>>1 is used to get the bit count of the number without the least significant bit",
+      "The expression i & 1 is used to get the least significant bit of the number"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "268": {
+    "approach": [
+      "Calculate the sum of all numbers from 0 to n (where n is the size of the input array)",
+      "Calculate the sum of all numbers in the input array",
+      "Find the missing number by subtracting the sum of the input array from the sum of all numbers"
+    ],
+    "comments": [
+      "The commented-out code uses XOR operation to find the missing number, which is a more efficient approach",
+      "The current implementation has a time complexity of O(n) due to the two separate loops for calculating sums"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "190": {
+    "approach": [
+      "initialize result variable",
+      "iterate 32 times to process each bit",
+      "left shift result and XOR with least significant bit of input",
+      "right shift input to move to next bit"
+    ],
+    "comments": [
+      "Assumes 32-bit integer, may not work for other sizes",
+      "Uses bitwise operations for efficiency"
+    ],
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "74": {
+    "approach": [
+      "Perform binary search on the rows of the matrix to find the row where the target could be",
+      "Check if the target is within the range of the current row",
+      "If the target is within the range, perform binary search on that row to find the target",
+      "If the target is not found after searching the row, return false"
+    ],
+    "comments": [
+      "The code assumes the input matrix is sorted in ascending order from left to right and top to bottom",
+      "The code uses two separate binary searches to first find the row and then the column where the target could be, which reduces the time complexity"
+    ],
+    "time": "O(log(m) + log(n))",
+    "space": "O(1)"
+  },
+  "70": {
+    "approach": [
+      "Handle base cases for n = 0, 1, 2",
+      "Initialize an array to store the number of ways to climb i stairs",
+      "Fill the array using dynamic programming, where each step is the sum of the two preceding steps",
+      "Return the number of ways to climb n stairs"
+    ],
+    "comments": [
+      "The use of an array of size n+1 to store the number of ways to climb i stairs allows for efficient computation, but may cause issues for very large inputs due to memory constraints"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "322": {
+    "approach": [
+      "Initialize a DP table with size amount+1",
+      "Fill the DP table using bottom-up dynamic programming",
+      "For each amount from 1 to the target, try all coins",
+      "Update the minimum number of coins needed for each amount",
+      "Return the minimum number of coins needed for the target amount or -1 if impossible"
+    ],
+    "comments": [
+      "The DP table is initialized with amount+1 to handle the case where it's impossible to make the target amount with the given coins"
+    ],
+    "time": "O(amount * n)",
+    "space": "O(amount)"
+  },
+  "300": {
+    "approach": [
+      "Initialize LIS array with 1s",
+      "Iterate through array from right to left",
+      "For each element, compare with elements to its right",
+      "Update LIS if a larger increasing subsequence is found"
+    ],
+    "comments": [
+      "This solution has a time complexity of O(n^2) due to the nested loops",
+      "It is not the most efficient solution for this problem, as a binary search approach can achieve O(n log n) time complexity"
+    ],
+    "time": "O(n^2)",
+    "space": "O(n)"
+  },
+  "1752": {
+    "approach": [
+      "Iterate through the array to find elements that are smaller than their previous element",
+      "Count the number of such elements and store it in the flag variable",
+      "Check if the last element is greater than the first element and increment the flag if true",
+      "Return true if the flag is 0 or 1, indicating the array is sorted and rotated"
+    ],
+    "comments": [
+      "The code assumes that a rotated array can only be rotated once, which is a key insight to solve this problem efficiently"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "1143": {
+    "approach": [
+      "Initialize a 2D array to store lengths of common subsequences",
+      "Fill the array in a bottom-up manner, comparing characters from both strings",
+      "If characters match, increment the length of the common subsequence",
+      "If characters do not match, choose the maximum length from the next cells",
+      "The length of the longest common subsequence is stored in the top-left cell"
+    ],
+    "comments": [
+      "The code uses a dynamic programming approach to avoid redundant computations",
+      "The time complexity is optimized by filling the array in a single pass"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
+  },
+  "27": {
+    "approach": [
+      "Initialize two pointers, one at the start and one at the end of the array",
+      "Iterate through the array from left to right, checking for the target value",
+      "When the target value is found, replace it with the value at the right pointer and decrement both pointers",
+      "Continue iterating until the left pointer meets the right pointer",
+      "Return the new length of the modified array"
+    ],
+    "comments": [
+      "The code has a bug: the left pointer is decremented after being used as the loop condition, which can cause an infinite loop",
+      "The correct implementation should not decrement the left pointer when replacing the target value"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "88": {
+    "approach": [
+      "Initialize pointers for nums1 and nums2 at their ends",
+      "Compare elements and place the larger one at the end of nums1",
+      "Repeat comparison until one of the arrays is exhausted",
+      "Copy remaining elements from nums2 to nums1 if any"
+    ],
+    "comments": [
+      "This solution modifies the input array nums1 in-place, which is more space-efficient than creating a new array",
+      "It assumes that nums1 has enough space to hold all elements from both arrays"
+    ],
+    "time": "O(m + n)",
+    "space": "O(1)"
+  },
+  "35": {
+    "approach": [
+      "Initialize two pointers, left and right, to the start and end of the array",
+      "Perform binary search, calculating the mid index and comparing the target to the middle element",
+      "If the target is found, return its index; otherwise, adjust the left or right pointer based on the comparison",
+      "If the target is not found, return the left pointer, which represents the insertion point"
+    ],
+    "comments": [
+      "The use of left + (right - left) / 2 instead of (left + right) / 2 avoids potential integer overflow"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "13": {
+    "approach": [
+      "Create a hash map to store Roman numerals and their integer values",
+      "Iterate through the input string",
+      "Compare each numeral with the next one to determine whether to add or subtract its value"
+    ],
+    "comments": [
+      "The code handles cases where a smaller numeral appears before a larger one (e.g., IV for 4) by subtracting the smaller numeral's value"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "1": {
+    "approach": [
+      "Create an unordered map to store numbers and their indices",
+      "Iterate through the input array",
+      "For each number, check if its complement exists in the map",
+      "If it does, return the current index and the index of the complement",
+      "If not, add the current number and its index to the map"
+    ],
+    "comments": [
+      "Using an unordered map allows for constant time lookups, making the overall solution more efficient"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "121": {
+    "approach": [
+      "Initialize two pointers, left and right, to the start of the prices array",
+      "Compare the difference between the prices at the right and left pointers",
+      "Update the maximum profit if the difference is greater",
+      "Move the pointers based on whether the difference is positive, negative, or zero",
+      "Continue iterating until the right pointer reaches the end of the array"
+    ],
+    "comments": [
+      "The code uses a two-pointer technique to find the maximum profit, but it does not explicitly use dynamic programming as the problem topic suggests",
+      "The time complexity is optimized by only moving the pointers when necessary, avoiding unnecessary comparisons"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "238": {
+    "approach": [
+      "Initialize prefix and postfix arrays",
+      "Calculate prefix products from left to right",
+      "Calculate postfix products from right to left",
+      "Combine prefix and postfix products for each element"
+    ],
+    "comments": [
+      "The code has an issue with the line where prefix and postfix arrays are declared. In C++, when using variable length arrays (VLAs), the size must be a constant expression. Instead, consider using std::vector for dynamic array sizing."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "125": {
+    "approach": [
+      "Initialize two pointers, one at the start and one at the end of the string",
+      "Skip non-alphanumeric characters from both ends",
+      "Compare characters at the current positions, ignoring case",
+      "Move pointers towards the center of the string",
+      "Repeat until pointers meet or cross"
+    ],
+    "comments": [
+      "The use of tolower() ensures the comparison is case-insensitive",
+      "The isalnum() function is used to filter out non-alphanumeric characters"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "11": {
+    "approach": [
+      "Initialize two pointers at both ends of the array",
+      "Calculate the area between the two pointers",
+      "Update max area if current area is larger",
+      "Move the pointer with the smaller height towards the center",
+      "Repeat until the two pointers meet"
+    ],
+    "comments": [
+      "The key insight is to move the pointer with the smaller height, because the area is limited by the smaller height",
+      "This greedy approach ensures we don't miss the maximum area"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "15": {
+    "approach": [
+      "Sort the input array",
+      "Iterate over the array with a pointer i",
+      "Use two pointers, left and right, to find a triplet summing to zero",
+      "Skip duplicate triplets",
+      "Adjust pointers based on the sum"
+    ],
+    "comments": [
+      "Early termination when nums[i] > 0 as the array is sorted and all subsequent triplets will have a sum greater than zero",
+      "Duplicate skipping is crucial to avoid redundant triplets in the result"
+    ],
+    "time": "O(n^2)",
+    "space": "O(n)"
+  },
+  "410": {
+    "approach": [
+      "Define a helper function willItWork to check if it's possible to split the array into k subarrays with a maximum sum of m",
+      "Initialize the search range with the minimum possible sum (max(nums)) and the maximum possible sum (sum(nums))",
+      "Perform binary search to find the minimum maximum sum",
+      "Update the search range based on the result of willItWork",
+      "Return the minimum maximum sum found"
+    ],
+    "comments": [
+      "The willItWork function uses a greedy approach to try to split the array into k subarrays with a maximum sum of m",
+      "The binary search approach is used to find the minimum maximum sum, which reduces the time complexity"
+    ],
+    "time": "O(n log sum)",
+    "space": "O(1)"
+  },
+  "3": {
+    "approach": [
+      "Initialize a sliding window with left and right pointers",
+      "Use a hash table to track the last seen index of each character",
+      "Update the left pointer when a repeating character is found",
+      "Update the maximum length of substring without repeating characters"
+    ],
+    "comments": [
+      "The key insight is to move the left pointer to the right of the previous occurrence of the repeating character, not just to the next character",
+      "This approach avoids unnecessary iterations and ensures the optimal solution"
+    ],
+    "time": "O(n)",
+    "space": "O(min(n, m))"
   }
 }
