@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 76
+- **Total Solved:** 77
 
 ---
 
@@ -82,6 +82,7 @@ All the questions I go through and my approach and understanding of each problem
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
 | 875 | Koko Eating Bananas | Binary Search | Medium | Python | [Link](04_Binary_Search/875_KokoEatingBananas.py) |
+| 1004 | Max Consecutive Ones III | Binary Search | Medium | Python | [Link](04_Binary_Search/1004_MaxConsecutiveOnesIII.py) |
 | 1011 | Capacity To Ship Packages Within D Days | Binary Search | Medium | Python | [Link](04_Binary_Search/1011_CapacityToShipPackagesWithinDDays.py) |
 | 1143 | Longest Common Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/1143_LongestCommonSubsequence.cpp) |
 | 1283 | Find the Smallest Divisor Given a Threshold | Binary Search | Medium | Python | [Link](04_Binary_Search/1283_FindTheSmallestDivisorGivenAThreshold.py) |

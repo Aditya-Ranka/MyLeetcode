@@ -873,5 +873,19 @@
     ],
     "time": "O(n)",
     "space": "O(min(n, m))"
+  },
+  "1004": {
+    "approach": [
+      "Initialize a sliding window with two pointers, l and r",
+      "Expand the window to the right and count zeros",
+      "Shrink the window from the left when zeros exceed k",
+      "Update the maximum length of consecutive ones"
+    ],
+    "comments": [
+      "The key insight is to maintain a window where the number of zeros does not exceed k",
+      "This allows us to efficiently find the longest subarray with at most k zeros"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
   }
 }
