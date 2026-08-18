@@ -887,5 +887,94 @@
     ],
     "time": "O(n)",
     "space": "O(1)"
+  },
+  "904": {
+    "approach": [
+      "Initialize count dict, left pointer l=0, best=0",
+      "Iterate over fruits with right index r and fruit f, increment count[f]",
+      "If more than two fruit types in count, shrink window from left: decrement count of fruits[l], delete key if count becomes 0, and move l right",
+      "Update best with current window size r-l+1",
+      "Return best as the maximum window length"
+    ],
+    "comments": [
+      "Handles empty input by returning 0",
+      "Count dict never holds more than two keys, so space usage is O(1)"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "424": {
+    "approach": [
+      "Init left pointer l=0, result res=0, and empty count dict.",
+      "Loop r over s with enumerate, increment count[ch].",
+      "While window length minus max(count.values()) > k, decrement count[s[l]] and increment l.",
+      "Update res = max(res, r-l+1) after window is valid.",
+      "Return res."
+    ],
+    "comments": [
+      "max(count.values()) is recomputed each iteration, costing O(Alphabet) time (constant 26 for lowercase letters).",
+      "Zero-frequency entries stay in the dict but do not affect correctness."
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "1423": {
+    "approach": [
+      "Compute total sum of all cards",
+      "If k >= n return total",
+      "Initialize sum of first n-k cards as current window sum",
+      "Slide window across array updating sum and track minimum window sum",
+      "Return total minus the minimum window sum"
+    ],
+    "comments": [
+      "Handles k equal to array length by early return; sliding window size zero works correctly"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "930": {
+    "approach": [
+      "Define helper findG(x) to count subarrays with sum ≤ x",
+      "Initialize left pointer, current sum, and result",
+      "Iterate right pointer, add nums[r] to current sum",
+      "While current sum > x, move left pointer and subtract from sum",
+      "Add (r-l+1) to result for each right position",
+      "Return findG(goal)-findG(goal-1) as count of subarrays with sum exactly goal"
+    ],
+    "comments": [
+      "Works only for non-negative (binary) arrays; handles goal=0 via early return",
+      "Uses O(1) extra space"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "1248": {
+    "approach": [
+      "Define helper atMost(x) to count subarrays with ≤x odd numbers using sliding window",
+      "Iterate right pointer over nums, increment oddCount on odd elements",
+      "While oddCount exceeds x, move left pointer and decrement oddCount when passing an odd",
+      "Add current window length (r-l+1) to result for each r",
+      "Return atMost(k)-atMost(k-1) to get exactly k odds"
+    ],
+    "comments": [
+      "Handles k=0 by returning 0 for atMost(-1)",
+      "Uses O(1) extra space"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "992": {
+    "approach": [
+      "Define helper to count subarrays with at most x distinct",
+      "Iterate right pointer, update frequency map",
+      "Shrink left pointer while distinct count exceeds x",
+      "Add (r-l+1) to result for each right"
+    ],
+    "comments": [
+      "Handles x<0 by returning 0, so k=0 yields 0",
+      "Uses O(k) extra space for the hashmap"
+    ],
+    "time": "O(n)",
+    "space": "O(k)"
   }
 }

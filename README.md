@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 77
+- **Total Solved:** 83
 
 ---
 
@@ -74,6 +74,7 @@ All the questions I go through and my approach and understanding of each problem
 | 338 | Counting Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/338_CountingBits.cpp) |
 | 347 | Top K Frequent Elements | Heaps | Medium | C++ | [Link](11_Heaps/347_TopKFrequentElements.cpp) |
 | 410 | Split Array Largest Sum | Dynamic Programming | Hard | Python | [Link](16_Dynamic_Programming/410_SplitArrayLargestSum.py) |
+| 424 | Longest Repeating Character Replacement | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/424_LongestRepeatingCharacterReplacement.py) |
 | 485 | Max Consecutive Ones | Arrays | Easy | Python | [Link](03_Arrays/485_MaxConsecutiveOnes.py) |
 | 493 | Reverse Pairs | Arrays | Hard | Python | [Link](03_Arrays/493_ReversePairs.py) |
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |
@@ -82,10 +83,15 @@ All the questions I go through and my approach and understanding of each problem
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
 | 875 | Koko Eating Bananas | Binary Search | Medium | Python | [Link](04_Binary_Search/875_KokoEatingBananas.py) |
+| 904 | Fruit Into Baskets | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/904_FruitIntoBaskets.py) |
+| 930 | Binary Subarrays With Sum | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/930_BinarySubarraysWithSum.py) |
+| 992 | Subarrays with K Different Integers | Sliding Window / Two Pointer | Hard | Python | [Link](10_Sliding_Window_Two_Pointer/992_SubarraysWithKDifferentIntegers.py) |
 | 1004 | Max Consecutive Ones III | Binary Search | Medium | Python | [Link](04_Binary_Search/1004_MaxConsecutiveOnesIII.py) |
 | 1011 | Capacity To Ship Packages Within D Days | Binary Search | Medium | Python | [Link](04_Binary_Search/1011_CapacityToShipPackagesWithinDDays.py) |
 | 1143 | Longest Common Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/1143_LongestCommonSubsequence.cpp) |
+| 1248 | Count Number of Nice Subarrays | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/1248_CountNumberOfNiceSubarrays.py) |
 | 1283 | Find the Smallest Divisor Given a Threshold | Binary Search | Medium | Python | [Link](04_Binary_Search/1283_FindTheSmallestDivisorGivenAThreshold.py) |
+| 1423 | Maximum Points You Can Obtain from Cards | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/1423_MaximumPointsYouCanObtainFromCards.py) |
 | 1482 | Minimum Number of Days to Make m Bouquets | Binary Search | Medium | Python | [Link](04_Binary_Search/1482_MinimumNumberOfDaysToMakeMBouquets.py) |
 | 1539 | Kth Missing Positive Number | Binary Search | Easy | Python | [Link](04_Binary_Search/1539_KthMissingPositiveNumber.py) |
 | 1552 | Magnetic Force Between Two Balls | Binary Search | Medium | Python | [Link](04_Binary_Search/1552_MagneticForceBetweenTwoBalls.py) |
