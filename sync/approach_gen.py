@@ -12,7 +12,7 @@ Env:
   LLM_BASE_URL   optional   — default https://api.groq.com/openai/v1   (Groq)
                               Gemini:  https://generativelanguage.googleapis.com/v1beta/openai/
                               Cerebras: https://api.cerebras.ai/v1
-  LLM_MODEL      optional   — default "llama-3.3-70b-versatile" (Groq).
+  LLM_MODEL      optional   — default "openai/gpt-oss-120b" (Groq).
                               VERIFY the current id in your provider's model list
                               (Gemini e.g. "gemini-2.5-flash").
 """
@@ -28,7 +28,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 SUBS = HERE / "submissions.json"
 APPR = HERE / "approaches.json"
 BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.groq.com/openai/v1")
-MODEL = os.environ.get("LLM_MODEL", "llama-3.3-70b-versatile")
+MODEL = os.environ.get("LLM_MODEL", "openai/gpt-oss-120b")
 
 PROMPT = """You document LeetCode solutions for a personal study repo. Describe what THIS
 specific submitted code does, not a generic textbook solution.
@@ -95,6 +95,7 @@ def main():
     if not missing:
         return
     client = OpenAI(base_url=BASE_URL, api_key=os.environ["LLM_API_KEY"])
+    failed = []
     for rec in missing:
         num = str(rec.get("frontend_id"))
         try:
@@ -102,8 +103,14 @@ def main():
             print(f"  + #{num} {rec.get('title')}", file=sys.stderr)
         except Exception as e:  # one bad problem shouldn't sink the run; retried next time
             print(f"  ! #{num} {rec.get('title')}: {e}", file=sys.stderr)
+            failed.append(num)
     APPR.write_text(json.dumps(approaches, indent=2, ensure_ascii=False))
     print(f"[approach-gen] approaches.json now has {len(approaches)} entries", file=sys.stderr)
+    if len(failed) == len(missing):
+        # Every problem failing is a config fault (retired model id, bad key), not bad luck.
+        # builder.py silently skips problems with no approach, so without this the daily job
+        # stays green while quietly syncing nothing.
+        sys.exit(f"All {len(missing)} generation(s) failed — check LLM_MODEL/LLM_API_KEY.")
 
 
 if __name__ == "__main__":
