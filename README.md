@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 83
+- **Total Solved:** 85
 
 ---
 
@@ -66,6 +66,7 @@ All the questions I go through and my approach and understanding of each problem
 | 217 | Contains Duplicate | Arrays | Easy | C++ | [Link](03_Arrays/217_ContainsDuplicate.cpp) |
 | 229 | Majority Element II | Arrays | Medium | Python | [Link](03_Arrays/229_MajorityElementII.py) |
 | 238 | Product of Array Except Self | Arrays | Medium | C++ | [Link](03_Arrays/238_ProductOfArrayExceptSelf.cpp) |
+| 240 | Search a 2D Matrix II | Binary Search | Medium | Python | [Link](04_Binary_Search/240_SearchA2DMatrixII.py) |
 | 242 | Valid Anagram | Strings | Easy | C++ | [Link](05_Strings/242_ValidAnagram.cpp) |
 | 268 | Missing Number | Arrays | Easy | C++ | [Link](03_Arrays/268_MissingNumber.cpp) |
 | 283 | Move Zeroes | Arrays | Easy | C++ | [Link](03_Arrays/283_MoveZeroes.cpp) |
@@ -73,6 +74,7 @@ All the questions I go through and my approach and understanding of each problem
 | 322 | Coin Change | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/322_CoinChange.cpp) |
 | 338 | Counting Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/338_CountingBits.cpp) |
 | 347 | Top K Frequent Elements | Heaps | Medium | C++ | [Link](11_Heaps/347_TopKFrequentElements.cpp) |
+| 378 | Kth Smallest Element in a Sorted Matrix | Heaps | Medium | Python | [Link](11_Heaps/378_KthSmallestElementInASortedMatrix.py) |
 | 410 | Split Array Largest Sum | Dynamic Programming | Hard | Python | [Link](16_Dynamic_Programming/410_SplitArrayLargestSum.py) |
 | 424 | Longest Repeating Character Replacement | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/424_LongestRepeatingCharacterReplacement.py) |
 | 485 | Max Consecutive Ones | Arrays | Easy | Python | [Link](03_Arrays/485_MaxConsecutiveOnes.py) |

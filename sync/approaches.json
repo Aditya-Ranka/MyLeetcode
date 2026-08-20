@@ -976,5 +976,34 @@
     ],
     "time": "O(n)",
     "space": "O(k)"
+  },
+  "240": {
+    "approach": [
+      "Determine the number of rows (m) and columns (n) of the matrix.",
+      "Iterate over each row index i from 0 to m-1.",
+      "If the first element of the current row exceeds the target, return False immediately (no later rows can contain the target).",
+      "Otherwise, run a binary search on the current row between column indices l and r.",
+      "If the target is found during the binary search, return True."
+    ],
+    "comments": [
+      "The function may fall off the end without an explicit return, implicitly returning None instead of False when the target is not found.",
+      "It assumes the matrix is non‑empty; calling it on an empty matrix would raise an IndexError."
+    ],
+    "time": "O(m log n)",
+    "space": "O(1)"
+  },
+  "378": {
+    "approach": [
+      "Set n as matrix dimension and define isFeasible(mid) to count elements ≤mid by iterating rows bottom‑up and columns left‑to‑right, breaking when a value exceeds mid",
+      "Initialize search bounds ansL and ansR to the smallest and largest matrix entries",
+      "Binary‑search while ansL≤ansR: compute mid, call isFeasible(mid); if true move ansR left, else move ansL right",
+      "After loop, return ansL as the kth smallest value"
+    ],
+    "comments": [
+      "The double loop in isFeasible runs O(n²) in the worst case, so the overall complexity is O(n²·log (range)) rather than the optimal O(n·log range)",
+      "Duplicates are handled because the check uses count≥k; the algorithm assumes matrix values fit in Python int range"
+    ],
+    "time": "O(n^2 log D)",
+    "space": "O(1)"
   }
 }
