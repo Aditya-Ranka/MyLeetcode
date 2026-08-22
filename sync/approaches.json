@@ -1005,5 +1005,20 @@
     ],
     "time": "O(n^2 log D)",
     "space": "O(1)"
+  },
+  "1901": {
+    "approach": [
+      "Initialize rows m and columns n, set binary search bounds lo=0, hi=n-1 on columns",
+      "While lo≤hi, pick mid column and scan all rows to find the row index best with the maximum value in that column",
+      "Compare mat[best][mid] with its left and right neighbours (using -1 as sentinel when out of bounds)",
+      "If the current element is greater than both neighbours, return its coordinates as a peak",
+      "Otherwise move the binary search to the side that has the larger neighbour (left → hi=mid-1, right → lo=mid+1)"
+    ],
+    "comments": [
+      "Using -1 as a sentinel for missing neighbours assumes matrix values are non‑negative; a true negative value could break the comparison",
+      "The algorithm runs in O(m log n) time and O(1) extra space"
+    ],
+    "time": "O(m log n)",
+    "space": "O(1)"
   }
 }

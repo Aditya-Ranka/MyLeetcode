@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 85
+- **Total Solved:** 86
 
 ---
 
@@ -99,6 +99,7 @@ All the questions I go through and my approach and understanding of each problem
 | 1552 | Magnetic Force Between Two Balls | Binary Search | Medium | Python | [Link](04_Binary_Search/1552_MagneticForceBetweenTwoBalls.py) |
 | 1752 | Check if Array Is Sorted and Rotated | Arrays | Easy | C++ | [Link](03_Arrays/1752_CheckIfArrayIsSortedAndRotated.cpp) |
 | 1838 | Frequency of the Most Frequent Element | Binary Search | Medium | Python | [Link](04_Binary_Search/1838_FrequencyOfTheMostFrequentElement.py) |
+| 1901 | Find a Peak Element II | Binary Search | Medium | Python | [Link](04_Binary_Search/1901_FindAPeakElementII.py) |
 | 2149 | Rearrange Array Elements by Sign | Arrays | Medium | Python | [Link](03_Arrays/2149_RearrangeArrayElementsBySign.py) |
 
 ---
