@@ -1020,5 +1020,19 @@
     ],
     "time": "O(m log n)",
     "space": "O(1)"
+  },
+  "155": {
+    "approach": [
+      "Initialize empty list to hold (value,current_min) pairs",
+      "On push compute new min as min(value, previous min) and append pair",
+      "Pop removes last pair",
+      "Top returns value part of last pair",
+      "getMin returns min part of last pair"
+    ],
+    "comments": [
+      "Methods assume stack is non‑empty; pop/top/getMin will raise IndexError on empty stack"
+    ],
+    "time": "O(1)",
+    "space": "O(n)"
   }
 }

@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 86
+- **Total Solved:** 87
 
 ---
 
@@ -57,6 +57,7 @@ All the questions I go through and my approach and understanding of each problem
 | 141 | Linked List Cycle | Linked List | Easy | C++ | [Link](06_Linked_List/141_LinkedListCycle.cpp) |
 | 152 | Maximum Product Subarray | Arrays | Medium | C++ | [Link](03_Arrays/152_MaximumProductSubarray.cpp) |
 | 153 | Find Minimum in Rotated Sorted Array | Binary Search | Medium | C++ | [Link](04_Binary_Search/153_FindMinimumInRotatedSortedArray.cpp) |
+| 155 | Min Stack | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/155_MinStack.py) |
 | 162 | Find Peak Element | Binary Search | Medium | Python | [Link](04_Binary_Search/162_FindPeakElement.py) |
 | 167 | Two Sum II - Input Array Is Sorted | Sliding Window / Two Pointer | Medium | C++ | [Link](10_Sliding_Window_Two_Pointer/167_TwoSumIIInputArrayIsSorted.cpp) |
 | 169 | Majority Element | Arrays | Easy | Python | [Link](03_Arrays/169_MajorityElement.py) |
