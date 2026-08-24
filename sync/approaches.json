@@ -1034,5 +1034,19 @@
     ],
     "time": "O(1)",
     "space": "O(n)"
+  },
+  "496": {
+    "approach": [
+      "Map each nums1 value to its index",
+      "Initialize result list with -1 and an empty stack",
+      "Iterate over nums2, popping smaller stack elements and recording their next greater",
+      "Assign the current nums2 element as the next greater for each popped value",
+      "Push the current element onto the stack only if it appears in nums1"
+    ],
+    "comments": [
+      "Assumes all numbers are distinct and that nums1 is a subset of nums2, as guaranteed by the problem"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
   }
 }

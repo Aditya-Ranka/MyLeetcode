@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 87
+- **Total Solved:** 88
 
 ---
 
@@ -80,6 +80,7 @@ All the questions I go through and my approach and understanding of each problem
 | 424 | Longest Repeating Character Replacement | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/424_LongestRepeatingCharacterReplacement.py) |
 | 485 | Max Consecutive Ones | Arrays | Easy | Python | [Link](03_Arrays/485_MaxConsecutiveOnes.py) |
 | 493 | Reverse Pairs | Arrays | Hard | Python | [Link](03_Arrays/493_ReversePairs.py) |
+| 496 | Next Greater Element I | Stack and Queues | Easy | Python | [Link](09_Stack_and_Queues/496_NextGreaterElementI.py) |
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |
 | 540 | Single Element in a Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/540_SingleElementInASortedArray.py) |
 | 560 | Subarray Sum Equals K | Arrays | Medium | Python | [Link](03_Arrays/560_SubarraySumEqualsK.py) |
