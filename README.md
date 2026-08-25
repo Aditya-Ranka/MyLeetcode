@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 88
+- **Total Solved:** 90
 
 ---
 
@@ -81,11 +81,13 @@ All the questions I go through and my approach and understanding of each problem
 | 485 | Max Consecutive Ones | Arrays | Easy | Python | [Link](03_Arrays/485_MaxConsecutiveOnes.py) |
 | 493 | Reverse Pairs | Arrays | Hard | Python | [Link](03_Arrays/493_ReversePairs.py) |
 | 496 | Next Greater Element I | Stack and Queues | Easy | Python | [Link](09_Stack_and_Queues/496_NextGreaterElementI.py) |
+| 503 | Next Greater Element II | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/503_NextGreaterElementII.py) |
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |
 | 540 | Single Element in a Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/540_SingleElementInASortedArray.py) |
 | 560 | Subarray Sum Equals K | Arrays | Medium | Python | [Link](03_Arrays/560_SubarraySumEqualsK.py) |
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
+| 739 | Daily Temperatures | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/739_DailyTemperatures.py) |
 | 875 | Koko Eating Bananas | Binary Search | Medium | Python | [Link](04_Binary_Search/875_KokoEatingBananas.py) |
 | 904 | Fruit Into Baskets | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/904_FruitIntoBaskets.py) |
 | 930 | Binary Subarrays With Sum | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/930_BinarySubarraysWithSum.py) |
