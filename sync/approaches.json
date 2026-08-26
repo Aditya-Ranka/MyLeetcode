@@ -1077,5 +1077,80 @@
     ],
     "time": "O(n)",
     "space": "O(n)"
+  },
+  "84": {
+    "approach": [
+      "Initialize maxSize and an empty stack storing (start index, height) pairs",
+      "Iterate over heights with index i and height n, setting start=i",
+      "While stack is non‑empty and n is less than the height at the top, pop (index,h), compute area h*(i-index), update maxSize, and set start=index",
+      "Push (start,n) onto the stack",
+      "After the loop, for each remaining (index,h) in the stack compute area h*(len(heights)-index) and update maxSize",
+      "Return maxSize"
+    ],
+    "comments": [
+      "Handles empty input returning 0; equal heights are kept to avoid redundant area calculations"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "42": {
+    "approach": [
+      "Initialize left and right pointers at the array ends and set maxL and maxR to the heights at those positions",
+      "Loop while left < right, comparing maxL and maxR",
+      "If maxL <= maxR, increment left, update maxL to the larger of current maxL and new height, and add maxL - height[left] to result",
+      "Else, decrement right, update maxR similarly, and add maxR - height[right] to result"
+    ],
+    "comments": [
+      "Returns 0 for an empty list",
+      "Uses only constant extra variables, so space is O(1)"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "200": {
+    "approach": [
+      "Iterate over each cell in the grid",
+      "When an unvisited land cell ('1') is encountered, launch a BFS from it",
+      "Use a deque to pop cells and push any adjacent land cells (up, down, left, right) that are inside bounds and not yet visited",
+      "Mark every visited cell in a set to avoid re‑processing",
+      "After the BFS empties, increment the island counter"
+    ],
+    "comments": [
+      "Assumes grid is non‑empty; accessing grid[0] will raise on an empty list",
+      "The inner loop reassigns the variables r and c, but this shadowing does not affect the outer loops"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
+  },
+  "733": {
+    "approach": [
+      "If starting pixel already has target color, return image",
+      "Store original color and initialize BFS queue with starting coordinates",
+      "Mark starting pixel with new color",
+      "While queue not empty, pop a pixel and examine its four neighbors",
+      "If neighbor is inside bounds and has original color, enqueue it and recolor it",
+      "Continue until all reachable original‑color pixels are recolored"
+    ],
+    "comments": [
+      "Early exit avoids infinite loop when new color equals original color",
+      "Uses range() checks for bounds each iteration"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
+  },
+  "994": {
+    "approach": [
+      "Collect positions of all initially rotten oranges and count fresh oranges",
+      "Perform BFS level‑by‑level using a deque for the current layer and another for the next layer",
+      "For each rotten orange, infect adjacent fresh oranges, enqueue them, decrement fresh count, and mark them rotten",
+      "Replace current layer with the next layer and increment elapsed time",
+      "After BFS, return -1 if any fresh orange remains, otherwise return elapsed time"
+    ],
+    "comments": [
+      "Uses two separate deques to isolate each BFS level, simplifying time increment logic",
+      "Range membership checks (r in range(rows)) create a new range each call; a simple bounds check (0<=r<rows) would be marginally faster"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
   }
 }

@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 90
+- **Total Solved:** 95
 
 ---
 
@@ -34,6 +34,7 @@ All the questions I go through and my approach and understanding of each problem
 | 34 | Find First and Last Position of Element in Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/034_FindFirstAndLastPositionOfElementInSortedArray.py) |
 | 35 | Search Insert Position | Binary Search | Easy | C++ | [Link](04_Binary_Search/035_SearchInsertPosition.cpp) |
 | 36 | Valid Sudoku | Arrays | Medium | Python | [Link](03_Arrays/036_ValidSudoku.py) |
+| 42 | Trapping Rain Water | Stack and Queues | Hard | Python | [Link](09_Stack_and_Queues/042_TrappingRainWater.py) |
 | 48 | Rotate Image | Arrays | Medium | Python | [Link](03_Arrays/048_RotateImage.py) |
 | 49 | Group Anagrams | Strings | Medium | C++ | [Link](05_Strings/049_GroupAnagrams.cpp) |
 | 53 | Maximum Subarray | Arrays | Medium | C++ | [Link](03_Arrays/053_MaximumSubarray.cpp) |
@@ -48,6 +49,7 @@ All the questions I go through and my approach and understanding of each problem
 | 75 | Sort Colors | Arrays | Medium | Python | [Link](03_Arrays/075_SortColors.py) |
 | 81 | Search in Rotated Sorted Array II | Binary Search | Medium | Python | [Link](04_Binary_Search/081_SearchInRotatedSortedArrayII.py) |
 | 83 | Remove Duplicates from Sorted List | Linked List | Easy | C++ | [Link](06_Linked_List/083_RemoveDuplicatesFromSortedList.cpp) |
+| 84 | Largest Rectangle in Histogram | Stack and Queues | Hard | Python | [Link](09_Stack_and_Queues/084_LargestRectangleInHistogram.py) |
 | 88 | Merge Sorted Array | Arrays | Easy | C++ | [Link](03_Arrays/088_MergeSortedArray.cpp) |
 | 118 | Pascal's Triangle | Arrays | Easy | Python | [Link](03_Arrays/118_PascalsTriangle.py) |
 | 121 | Best Time to Buy and Sell Stock | Arrays | Easy | C++ | [Link](03_Arrays/121_BestTimeToBuyAndSellStock.cpp) |
@@ -64,6 +66,7 @@ All the questions I go through and my approach and understanding of each problem
 | 189 | Rotate Array | Arrays | Medium | Python | [Link](03_Arrays/189_RotateArray.py) |
 | 190 | Reverse Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/190_ReverseBits.cpp) |
 | 191 | Number of 1 Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/191_NumberOf1Bits.cpp) |
+| 200 | Number of Islands | Arrays | Medium | Python | [Link](03_Arrays/200_NumberOfIslands.py) |
 | 217 | Contains Duplicate | Arrays | Easy | C++ | [Link](03_Arrays/217_ContainsDuplicate.cpp) |
 | 229 | Majority Element II | Arrays | Medium | Python | [Link](03_Arrays/229_MajorityElementII.py) |
 | 238 | Product of Array Except Self | Arrays | Medium | C++ | [Link](03_Arrays/238_ProductOfArrayExceptSelf.cpp) |
@@ -87,11 +90,13 @@ All the questions I go through and my approach and understanding of each problem
 | 560 | Subarray Sum Equals K | Arrays | Medium | Python | [Link](03_Arrays/560_SubarraySumEqualsK.py) |
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
+| 733 | Flood Fill | Arrays | Easy | Python | [Link](03_Arrays/733_FloodFill.py) |
 | 739 | Daily Temperatures | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/739_DailyTemperatures.py) |
 | 875 | Koko Eating Bananas | Binary Search | Medium | Python | [Link](04_Binary_Search/875_KokoEatingBananas.py) |
 | 904 | Fruit Into Baskets | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/904_FruitIntoBaskets.py) |
 | 930 | Binary Subarrays With Sum | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/930_BinarySubarraysWithSum.py) |
 | 992 | Subarrays with K Different Integers | Sliding Window / Two Pointer | Hard | Python | [Link](10_Sliding_Window_Two_Pointer/992_SubarraysWithKDifferentIntegers.py) |
+| 994 | Rotting Oranges | Arrays | Medium | Python | [Link](03_Arrays/994_RottingOranges.py) |
 | 1004 | Max Consecutive Ones III | Binary Search | Medium | Python | [Link](04_Binary_Search/1004_MaxConsecutiveOnesIII.py) |
 | 1011 | Capacity To Ship Packages Within D Days | Binary Search | Medium | Python | [Link](04_Binary_Search/1011_CapacityToShipPackagesWithinDDays.py) |
 | 1143 | Longest Common Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/1143_LongestCommonSubsequence.cpp) |
