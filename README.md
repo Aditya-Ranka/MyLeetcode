@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 95
+- **Total Solved:** 98
 
 ---
 
@@ -55,6 +55,7 @@ All the questions I go through and my approach and understanding of each problem
 | 121 | Best Time to Buy and Sell Stock | Arrays | Easy | C++ | [Link](03_Arrays/121_BestTimeToBuyAndSellStock.cpp) |
 | 125 | Valid Palindrome | Strings | Easy | C++ | [Link](05_Strings/125_ValidPalindrome.cpp) |
 | 128 | Longest Consecutive Sequence | Arrays | Medium | Python | [Link](03_Arrays/128_LongestConsecutiveSequence.py) |
+| 130 | Surrounded Regions | Arrays | Medium | Python | [Link](03_Arrays/130_SurroundedRegions.py) |
 | 136 | Single Number | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/136_SingleNumber.cpp) |
 | 141 | Linked List Cycle | Linked List | Easy | C++ | [Link](06_Linked_List/141_LinkedListCycle.cpp) |
 | 152 | Maximum Product Subarray | Arrays | Medium | C++ | [Link](03_Arrays/152_MaximumProductSubarray.cpp) |
@@ -87,6 +88,7 @@ All the questions I go through and my approach and understanding of each problem
 | 503 | Next Greater Element II | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/503_NextGreaterElementII.py) |
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |
 | 540 | Single Element in a Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/540_SingleElementInASortedArray.py) |
+| 542 | 01 Matrix | Dynamic Programming | Medium | Python | [Link](16_Dynamic_Programming/542_01Matrix.py) |
 | 560 | Subarray Sum Equals K | Arrays | Medium | Python | [Link](03_Arrays/560_SubarraySumEqualsK.py) |
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
@@ -99,6 +101,7 @@ All the questions I go through and my approach and understanding of each problem
 | 994 | Rotting Oranges | Arrays | Medium | Python | [Link](03_Arrays/994_RottingOranges.py) |
 | 1004 | Max Consecutive Ones III | Binary Search | Medium | Python | [Link](04_Binary_Search/1004_MaxConsecutiveOnesIII.py) |
 | 1011 | Capacity To Ship Packages Within D Days | Binary Search | Medium | Python | [Link](04_Binary_Search/1011_CapacityToShipPackagesWithinDDays.py) |
+| 1020 | Number of Enclaves | Arrays | Medium | Python | [Link](03_Arrays/1020_NumberOfEnclaves.py) |
 | 1143 | Longest Common Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/1143_LongestCommonSubsequence.cpp) |
 | 1248 | Count Number of Nice Subarrays | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/1248_CountNumberOfNiceSubarrays.py) |
 | 1283 | Find the Smallest Divisor Given a Threshold | Binary Search | Medium | Python | [Link](04_Binary_Search/1283_FindTheSmallestDivisorGivenAThreshold.py) |

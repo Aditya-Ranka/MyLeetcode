@@ -1152,5 +1152,47 @@
     ],
     "time": "O(m*n)",
     "space": "O(m*n)"
+  },
+  "130": {
+    "approach": [
+      "Check for empty board",
+      "Mark all border 'O's as safe and enqueue them",
+      "BFS from queue, converting connected 'O's to safe",
+      "Flip remaining 'O's to 'X' and revert safe markers to 'O'"
+    ],
+    "comments": [
+      "Uses a temporary marker 'S' to avoid revisiting cells",
+      "Queue may grow to O(m*n) in worst case"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
+  },
+  "542": {
+    "approach": [
+      "Initialize queue with all zero cells and mark others as -1",
+      "Perform BFS expanding from zeros",
+      "Set each unvisited neighbor to current distance+1 and enqueue it",
+      "Repeat until queue is empty"
+    ],
+    "comments": [
+      "In‑place modification uses -1 as unvisited marker",
+      "Queue may hold up to O(m·n) cells in worst case"
+    ],
+    "time": "O(m*n)",
+    "space": "O(m*n)"
+  },
+  "1020": {
+    "approach": [
+      "Count all land cells (value 1) in the grid",
+      "Add every border land cell to a queue, mark it visited, and subtract it from the count",
+      "Perform BFS from the queue, visiting 4‑directionally adjacent land cells, marking them visited and subtracting each from the count",
+      "Return the remaining count as the number of enclave cells"
+    ],
+    "comments": [
+      "Uses a separate visited set; could reuse the grid to achieve O(1) extra space",
+      "Range checks (r in range(rows)) create a new range object each iteration but are still O(1)"
+    ],
+    "time": "O(rows * cols)",
+    "space": "O(rows * cols)"
   }
 }
