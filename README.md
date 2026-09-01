@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 98
+- **Total Solved:** 107
 
 ---
 
@@ -35,8 +35,10 @@ All the questions I go through and my approach and understanding of each problem
 | 35 | Search Insert Position | Binary Search | Easy | C++ | [Link](04_Binary_Search/035_SearchInsertPosition.cpp) |
 | 36 | Valid Sudoku | Arrays | Medium | Python | [Link](03_Arrays/036_ValidSudoku.py) |
 | 42 | Trapping Rain Water | Stack and Queues | Hard | Python | [Link](09_Stack_and_Queues/042_TrappingRainWater.py) |
+| 46 | Permutations | Arrays | Medium | Python | [Link](03_Arrays/046_Permutations.py) |
 | 48 | Rotate Image | Arrays | Medium | Python | [Link](03_Arrays/048_RotateImage.py) |
 | 49 | Group Anagrams | Strings | Medium | C++ | [Link](05_Strings/049_GroupAnagrams.cpp) |
+| 50 | Pow(x, n) | Math | Medium | Python | [Link](01_Math/050_Pow(xN).py) |
 | 53 | Maximum Subarray | Arrays | Medium | C++ | [Link](03_Arrays/053_MaximumSubarray.cpp) |
 | 54 | Spiral Matrix | Arrays | Medium | Python | [Link](03_Arrays/054_SpiralMatrix.py) |
 | 56 | Merge Intervals | Arrays | Medium | Python | [Link](03_Arrays/056_MergeIntervals.py) |
@@ -47,6 +49,7 @@ All the questions I go through and my approach and understanding of each problem
 | 73 | Set Matrix Zeroes | Arrays | Medium | Python | [Link](03_Arrays/073_SetMatrixZeroes.py) |
 | 74 | Search a 2D Matrix | Binary Search | Medium | C++ | [Link](04_Binary_Search/074_SearchA2DMatrix.cpp) |
 | 75 | Sort Colors | Arrays | Medium | Python | [Link](03_Arrays/075_SortColors.py) |
+| 78 | Subsets | Bit Manipulation | Medium | Python | [Link](08_Bit_Manipulation/078_Subsets.py) |
 | 81 | Search in Rotated Sorted Array II | Binary Search | Medium | Python | [Link](04_Binary_Search/081_SearchInRotatedSortedArrayII.py) |
 | 83 | Remove Duplicates from Sorted List | Linked List | Easy | C++ | [Link](06_Linked_List/083_RemoveDuplicatesFromSortedList.cpp) |
 | 84 | Largest Rectangle in Histogram | Stack and Queues | Hard | Python | [Link](09_Stack_and_Queues/084_LargestRectangleInHistogram.py) |
@@ -68,8 +71,11 @@ All the questions I go through and my approach and understanding of each problem
 | 190 | Reverse Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/190_ReverseBits.cpp) |
 | 191 | Number of 1 Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/191_NumberOf1Bits.cpp) |
 | 200 | Number of Islands | Arrays | Medium | Python | [Link](03_Arrays/200_NumberOfIslands.py) |
+| 207 | Course Schedule | Misc | Medium | Python | [Link](99_Misc/207_CourseSchedule.py) |
+| 210 | Course Schedule II | Misc | Medium | Python | [Link](99_Misc/210_CourseScheduleII.py) |
 | 217 | Contains Duplicate | Arrays | Easy | C++ | [Link](03_Arrays/217_ContainsDuplicate.cpp) |
 | 229 | Majority Element II | Arrays | Medium | Python | [Link](03_Arrays/229_MajorityElementII.py) |
+| 231 | Power of Two | Bit Manipulation | Easy | Python | [Link](08_Bit_Manipulation/231_PowerOfTwo.py) |
 | 238 | Product of Array Except Self | Arrays | Medium | C++ | [Link](03_Arrays/238_ProductOfArrayExceptSelf.cpp) |
 | 240 | Search a 2D Matrix II | Binary Search | Medium | Python | [Link](04_Binary_Search/240_SearchA2DMatrixII.py) |
 | 242 | Valid Anagram | Strings | Easy | C++ | [Link](05_Strings/242_ValidAnagram.cpp) |
@@ -78,6 +84,7 @@ All the questions I go through and my approach and understanding of each problem
 | 300 | Longest Increasing Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/300_LongestIncreasingSubsequence.cpp) |
 | 322 | Coin Change | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/322_CoinChange.cpp) |
 | 338 | Counting Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/338_CountingBits.cpp) |
+| 344 | Reverse String | Sliding Window / Two Pointer | Easy | Python | [Link](10_Sliding_Window_Two_Pointer/344_ReverseString.py) |
 | 347 | Top K Frequent Elements | Heaps | Medium | C++ | [Link](11_Heaps/347_TopKFrequentElements.cpp) |
 | 378 | Kth Smallest Element in a Sorted Matrix | Heaps | Medium | Python | [Link](11_Heaps/378_KthSmallestElementInASortedMatrix.py) |
 | 410 | Split Array Largest Sum | Dynamic Programming | Hard | Python | [Link](16_Dynamic_Programming/410_SplitArrayLargestSum.py) |
@@ -89,6 +96,7 @@ All the questions I go through and my approach and understanding of each problem
 | 509 | Fibonacci Number | Dynamic Programming | Easy | Python | [Link](16_Dynamic_Programming/509_FibonacciNumber.py) |
 | 540 | Single Element in a Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/540_SingleElementInASortedArray.py) |
 | 542 | 01 Matrix | Dynamic Programming | Medium | Python | [Link](16_Dynamic_Programming/542_01Matrix.py) |
+| 547 | Number of Provinces | Misc | Medium | Python | [Link](99_Misc/547_NumberOfProvinces.py) |
 | 560 | Subarray Sum Equals K | Arrays | Medium | Python | [Link](03_Arrays/560_SubarraySumEqualsK.py) |
 | 645 | Set Mismatch | Arrays | Easy | Python | [Link](03_Arrays/645_SetMismatch.py) |
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
@@ -109,6 +117,7 @@ All the questions I go through and my approach and understanding of each problem
 | 1482 | Minimum Number of Days to Make m Bouquets | Binary Search | Medium | Python | [Link](04_Binary_Search/1482_MinimumNumberOfDaysToMakeMBouquets.py) |
 | 1539 | Kth Missing Positive Number | Binary Search | Easy | Python | [Link](04_Binary_Search/1539_KthMissingPositiveNumber.py) |
 | 1552 | Magnetic Force Between Two Balls | Binary Search | Medium | Python | [Link](04_Binary_Search/1552_MagneticForceBetweenTwoBalls.py) |
+| 1647 | Minimum Deletions to Make Character Frequencies Unique | Strings | Medium | Python | [Link](05_Strings/1647_MinimumDeletionsToMakeCharacterFrequenciesUnique.py) |
 | 1752 | Check if Array Is Sorted and Rotated | Arrays | Easy | C++ | [Link](03_Arrays/1752_CheckIfArrayIsSortedAndRotated.cpp) |
 | 1838 | Frequency of the Most Frequent Element | Binary Search | Medium | Python | [Link](04_Binary_Search/1838_FrequencyOfTheMostFrequentElement.py) |
 | 1901 | Find a Peak Element II | Binary Search | Medium | Python | [Link](04_Binary_Search/1901_FindAPeakElementII.py) |

@@ -1194,5 +1194,135 @@
     ],
     "time": "O(rows * cols)",
     "space": "O(rows * cols)"
+  },
+  "547": {
+    "approach": [
+      "Initialize visited list of size n",
+      "Define recursive dfs that marks a city and recursively visits all directly connected cities by scanning the matrix row",
+      "Loop through each city; if unvisited, start dfs and increment province count"
+    ],
+    "comments": [
+      "DFS recursion may exceed Python's recursion limit on very large inputs",
+      "Scanning the entire row for each dfs call yields O(n²) time"
+    ],
+    "time": "O(n^2)",
+    "space": "O(n)"
+  },
+  "207": {
+    "approach": [
+      "Initialize a map from each course to its list of prerequisite courses",
+      "Populate the map using the given prerequisites list",
+      "Define a recursive dfs that detects cycles using a visited set and memoizes safe courses by clearing their prerequisite list",
+      "For each course, invoke dfs; if any call returns false, a cycle exists",
+      "Return true only if all courses are processed without detecting a cycle"
+    ],
+    "comments": [
+      "The code clears premap[crs] after confirming the course has no cycles, effectively memoizing results and avoiding re‑processing",
+      "Recursive depth may hit Python's recursion limit on very deep prerequisite chains"
+    ],
+    "time": "O(numCourses + len(prerequisites))",
+    "space": "O(numCourses + len(prerequisites))"
+  },
+  "210": {
+    "approach": [
+      "Create a map from each course to its list of prerequisites",
+      "Define DFS that uses a recursion‑stack set to detect cycles and a visited set for completed nodes",
+      "In DFS, recursively process all prerequisites; if a cycle is found return False",
+      "After processing all prerequisites of a course, add the course to the result list and mark it visited",
+      "Iterate over every course, invoking DFS; if any call returns False, return an empty list",
+      "Return the result list as the course order"
+    ],
+    "comments": [
+      "Recursive DFS may exceed Python's recursion limit on very deep prerequisite chains",
+      "The result list is built in post‑order, which already yields a valid topological ordering"
+    ],
+    "time": "O(numCourses+prerequisites)",
+    "space": "O(numCourses+prerequisites)"
+  },
+  "344": {
+    "approach": [
+      "Initialize left index l=0 and right index r=len(s)-1",
+      "Iterate floor(len(s)/2) times using a for‑loop",
+      "Swap s[l] and s[r] with a temporary variable, then increment l and decrement r"
+    ],
+    "comments": [
+      "Handles empty or single‑element lists gracefully; uses integer division to compute half length"
+    ],
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "231": {
+    "approach": [
+      "Return False if n is non‑positive",
+      "Loop while n>1, compute n%2",
+      "If remainder not zero, return False",
+      "Divide n by 2 using /= operator",
+      "After loop, return True"
+    ],
+    "comments": [
+      "Uses '/' causing n to become float, which may introduce precision issues for large numbers"
+    ],
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "50": {
+    "approach": [
+      "If n is negative, invert x and make n positive",
+      "Recursively compute power for n//2 using helper",
+      "Square the result of the recursive call",
+      "If n is odd, multiply the squared result by x",
+      "Return the final product"
+    ],
+    "comments": [
+      "Uses recursion depth O(log n), which may hit Python recursion limit for extremely large exponents",
+      "Floating‑point precision errors can accumulate for large |n|"
+    ],
+    "time": "O(log n)",
+    "space": "O(log n)"
+  },
+  "78": {
+    "approach": [
+      "Initialize empty result list and a temporary current list",
+      "Define dfs(i) that recurses on index i",
+      "If i reaches len(nums), copy current list into result",
+      "Otherwise, include nums[i] and recurse, then backtrack and exclude nums[i] and recurse",
+      "Start dfs from index 0 and return the accumulated result"
+    ],
+    "comments": [
+      "Uses curr.copy() to capture each subset without later mutation",
+      "Recursion depth is at most n, producing subsets in inclusion‑first order"
+    ],
+    "time": "O(2^n)",
+    "space": "O(n)"
+  },
+  "46": {
+    "approach": [
+      "Return a single‑element list when nums length is 1",
+      "Iterate over positions by popping the first element with pop(0)",
+      "Recursively permute the remaining list",
+      "Append the popped element to each returned permutation",
+      "Extend the result list and push the element back to restore nums"
+    ],
+    "comments": [
+      "Using pop(0) shifts the whole list, adding an O(k) cost at each recursion level, so the practical runtime is higher than the theoretical O(n·n!)",
+      "The function does not handle an empty input list; it returns [] instead of the expected [[]]"
+    ],
+    "time": "O(n·n!)",
+    "space": "O(n·n!)"
+  },
+  "1647": {
+    "approach": [
+      "Count occurrences of each character in the string using a hashmap.",
+      "Initialize a set to store frequencies that have already been used and a counter for deletions.",
+      "For each character's frequency, repeatedly decrement it (counting a deletion each time) until the frequency is either zero or not present in the set.",
+      "Add the final (possibly zero) frequency to the set and continue with the next character.",
+      "Return the total number of deletions performed."
+    ],
+    "comments": [
+      "A zero frequency is still added to the set, but the loop stops at freq > 0, preventing an infinite loop.",
+      "The algorithm works without sorting because it always reduces a duplicate frequency to the nearest lower unused value, which is optimal."
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
   }
 }
