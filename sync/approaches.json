@@ -1324,5 +1324,18 @@
     ],
     "time": "O(n)",
     "space": "O(n)"
+  },
+  "5": {
+    "approach": [
+      "Iterate each character as a potential palindrome center",
+      "Expand outward while characters match for odd‑length palindromes",
+      "Expand outward while characters match for even‑length palindromes and update longest found"
+    ],
+    "comments": [
+      "Handles empty input by returning an empty string",
+      "Time complexity O(n^2) due to nested expansions, space complexity O(1)"
+    ],
+    "time": "O(n^2)",
+    "space": "O(1)"
   }
 }

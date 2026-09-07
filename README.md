@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 107
+- **Total Solved:** 108
 
 ---
 
@@ -19,6 +19,7 @@ All the questions I go through and my approach and understanding of each problem
 | 2 | Add Two Numbers | Linked List | Medium | C++ | [Link](06_Linked_List/002_AddTwoNumbers.cpp) |
 | 3 | Longest Substring Without Repeating Characters | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/003_LongestSubstringWithoutRepeatingCharacters.py) |
 | 4 | Median of Two Sorted Arrays | Binary Search | Hard | Python | [Link](04_Binary_Search/004_MedianOfTwoSortedArrays.py) |
+| 5 | Longest Palindromic Substring | Dynamic Programming | Medium | Python | [Link](16_Dynamic_Programming/005_LongestPalindromicSubstring.py) |
 | 7 | Reverse Integer | Math | Medium | C++ | [Link](01_Math/007_ReverseInteger.cpp) |
 | 9 | Palindrome Number | Math | Easy | C++ | [Link](01_Math/009_PalindromeNumber.cpp) |
 | 11 | Container With Most Water | Sliding Window / Two Pointer | Medium | C++ | [Link](10_Sliding_Window_Two_Pointer/011_ContainerWithMostWater.cpp) |
