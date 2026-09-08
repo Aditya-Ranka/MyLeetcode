@@ -1337,5 +1337,19 @@
     ],
     "time": "O(n^2)",
     "space": "O(1)"
+  },
+  "21": {
+    "approach": [
+      "Check if either input list is None and return the other",
+      "Create a dummy ListNode and keep a pointer to its head",
+      "Iterate while both lists have nodes, link the smaller node to the result and advance pointers",
+      "Append any remaining nodes from the non‑exhausted list",
+      "Return the merged list starting after the dummy node"
+    ],
+    "comments": [
+      "Uses a dummy node to simplify linking; modifies the original nodes in‑place, so no extra list nodes are allocated"
+    ],
+    "time": "O(n+m)",
+    "space": "O(1)"
   }
 }

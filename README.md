@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 108
+- **Total Solved:** 109
 
 ---
 
@@ -28,6 +28,7 @@ All the questions I go through and my approach and understanding of each problem
 | 18 | 4Sum | Arrays | Medium | Python | [Link](03_Arrays/018_4Sum.py) |
 | 19 | Remove Nth Node From End of List | Linked List | Medium | C++ | [Link](06_Linked_List/019_RemoveNthNodeFromEndOfList.cpp) |
 | 20 | Valid Parentheses | Stack and Queues | Easy | C++ | [Link](09_Stack_and_Queues/020_ValidParentheses.cpp) |
+| 21 | Merge Two Sorted Lists | Linked List | Easy | Python | [Link](06_Linked_List/021_MergeTwoSortedLists.py) |
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | C++ | [Link](03_Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
 | 27 | Remove Element | Arrays | Easy | C++ | [Link](03_Arrays/027_RemoveElement.cpp) |
 | 31 | Next Permutation | Arrays | Medium | Python | [Link](03_Arrays/031_NextPermutation.py) |
