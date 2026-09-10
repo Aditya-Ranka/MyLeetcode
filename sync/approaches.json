@@ -1351,5 +1351,21 @@
     ],
     "time": "O(n+m)",
     "space": "O(1)"
+  },
+  "28": {
+    "approach": [
+      "Initialize hayP and needleP to 0",
+      "Iterate hayP while it is less than len(haystack)",
+      "If haystack[hayP] equals needle[needleP], compare haystack slice of length len(needle) starting at hayP with needle",
+      "If the slice matches, return hayP",
+      "Increment hayP and continue",
+      "Return -1 after loop ends"
+    ],
+    "comments": [
+      "Fails when needle is empty (IndexError)",
+      "Runs in O(n*m) time because it creates and compares a slice at each position"
+    ],
+    "time": "O(n*m)",
+    "space": "O(1)"
   }
 }

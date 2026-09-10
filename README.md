@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 109
+- **Total Solved:** 110
 
 ---
 
@@ -31,6 +31,7 @@ All the questions I go through and my approach and understanding of each problem
 | 21 | Merge Two Sorted Lists | Linked List | Easy | Python | [Link](06_Linked_List/021_MergeTwoSortedLists.py) |
 | 26 | Remove Duplicates from Sorted Array | Arrays | Easy | C++ | [Link](03_Arrays/026_RemoveDuplicatesFromSortedArray.cpp) |
 | 27 | Remove Element | Arrays | Easy | C++ | [Link](03_Arrays/027_RemoveElement.cpp) |
+| 28 | Find the Index of the First Occurrence in a String | Sliding Window / Two Pointer | Easy | Python | [Link](10_Sliding_Window_Two_Pointer/028_FindTheIndexOfTheFirstOccurrenceInAString.py) |
 | 31 | Next Permutation | Arrays | Medium | Python | [Link](03_Arrays/031_NextPermutation.py) |
 | 33 | Search in Rotated Sorted Array | Binary Search | Medium | C++ | [Link](04_Binary_Search/033_SearchInRotatedSortedArray.cpp) |
 | 34 | Find First and Last Position of Element in Sorted Array | Binary Search | Medium | Python | [Link](04_Binary_Search/034_FindFirstAndLastPositionOfElementInSortedArray.py) |
