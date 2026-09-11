@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 110
+- **Total Solved:** 115
 
 ---
 
@@ -24,6 +24,7 @@ All the questions I go through and my approach and understanding of each problem
 | 9 | Palindrome Number | Math | Easy | C++ | [Link](01_Math/009_PalindromeNumber.cpp) |
 | 11 | Container With Most Water | Sliding Window / Two Pointer | Medium | C++ | [Link](10_Sliding_Window_Two_Pointer/011_ContainerWithMostWater.cpp) |
 | 13 | Roman to Integer | Strings | Easy | C++ | [Link](05_Strings/013_RomanToInteger.cpp) |
+| 14 | Longest Common Prefix | Tries | Easy | Python | [Link](17_Tries/014_LongestCommonPrefix.py) |
 | 15 | 3Sum | Arrays | Medium | C++ | [Link](03_Arrays/015_3Sum.cpp) |
 | 18 | 4Sum | Arrays | Medium | Python | [Link](03_Arrays/018_4Sum.py) |
 | 19 | Remove Nth Node From End of List | Linked List | Medium | C++ | [Link](06_Linked_List/019_RemoveNthNodeFromEndOfList.cpp) |
@@ -64,6 +65,7 @@ All the questions I go through and my approach and understanding of each problem
 | 130 | Surrounded Regions | Arrays | Medium | Python | [Link](03_Arrays/130_SurroundedRegions.py) |
 | 136 | Single Number | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/136_SingleNumber.cpp) |
 | 141 | Linked List Cycle | Linked List | Easy | C++ | [Link](06_Linked_List/141_LinkedListCycle.cpp) |
+| 151 | Reverse Words in a String | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/151_ReverseWordsInAString.py) |
 | 152 | Maximum Product Subarray | Arrays | Medium | C++ | [Link](03_Arrays/152_MaximumProductSubarray.cpp) |
 | 153 | Find Minimum in Rotated Sorted Array | Binary Search | Medium | C++ | [Link](04_Binary_Search/153_FindMinimumInRotatedSortedArray.cpp) |
 | 155 | Min Stack | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/155_MinStack.py) |
@@ -74,6 +76,7 @@ All the questions I go through and my approach and understanding of each problem
 | 190 | Reverse Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/190_ReverseBits.cpp) |
 | 191 | Number of 1 Bits | Bit Manipulation | Easy | C++ | [Link](08_Bit_Manipulation/191_NumberOf1Bits.cpp) |
 | 200 | Number of Islands | Arrays | Medium | Python | [Link](03_Arrays/200_NumberOfIslands.py) |
+| 205 | Isomorphic Strings | Strings | Easy | Python | [Link](05_Strings/205_IsomorphicStrings.py) |
 | 207 | Course Schedule | Misc | Medium | Python | [Link](99_Misc/207_CourseSchedule.py) |
 | 210 | Course Schedule II | Misc | Medium | Python | [Link](99_Misc/210_CourseScheduleII.py) |
 | 217 | Contains Duplicate | Arrays | Easy | C++ | [Link](03_Arrays/217_ContainsDuplicate.cpp) |
@@ -113,6 +116,7 @@ All the questions I go through and my approach and understanding of each problem
 | 1004 | Max Consecutive Ones III | Binary Search | Medium | Python | [Link](04_Binary_Search/1004_MaxConsecutiveOnesIII.py) |
 | 1011 | Capacity To Ship Packages Within D Days | Binary Search | Medium | Python | [Link](04_Binary_Search/1011_CapacityToShipPackagesWithinDDays.py) |
 | 1020 | Number of Enclaves | Arrays | Medium | Python | [Link](03_Arrays/1020_NumberOfEnclaves.py) |
+| 1021 | Remove Outermost Parentheses | Stack and Queues | Easy | Python | [Link](09_Stack_and_Queues/1021_RemoveOutermostParentheses.py) |
 | 1143 | Longest Common Subsequence | Dynamic Programming | Medium | C++ | [Link](16_Dynamic_Programming/1143_LongestCommonSubsequence.cpp) |
 | 1248 | Count Number of Nice Subarrays | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/1248_CountNumberOfNiceSubarrays.py) |
 | 1283 | Find the Smallest Divisor Given a Threshold | Binary Search | Medium | Python | [Link](04_Binary_Search/1283_FindTheSmallestDivisorGivenAThreshold.py) |
@@ -124,6 +128,7 @@ All the questions I go through and my approach and understanding of each problem
 | 1752 | Check if Array Is Sorted and Rotated | Arrays | Easy | C++ | [Link](03_Arrays/1752_CheckIfArrayIsSortedAndRotated.cpp) |
 | 1838 | Frequency of the Most Frequent Element | Binary Search | Medium | Python | [Link](04_Binary_Search/1838_FrequencyOfTheMostFrequentElement.py) |
 | 1901 | Find a Peak Element II | Binary Search | Medium | Python | [Link](04_Binary_Search/1901_FindAPeakElementII.py) |
+| 1903 | Largest Odd Number in String | Strings | Easy | Python | [Link](05_Strings/1903_LargestOddNumberInString.py) |
 | 2149 | Rearrange Array Elements by Sign | Arrays | Medium | Python | [Link](03_Arrays/2149_RearrangeArrayElementsBySign.py) |
 
 ---

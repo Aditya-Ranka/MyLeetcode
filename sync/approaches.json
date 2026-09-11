@@ -1367,5 +1367,79 @@
     ],
     "time": "O(n*m)",
     "space": "O(1)"
+  },
+  "1021": {
+    "approach": [
+      "Init empty stack and result list",
+      "Iterate over each character in the input string",
+      "If stack is empty, push the '(' onto stack and skip adding it to result (outer opening)",
+      "If char is '(' and stack not empty, append it to result and push onto stack",
+      "If char is ')', append it to result, pop stack, and if stack becomes empty remove the just‑added ')' (outer closing)",
+      "Join the result list into a string and return it"
+    ],
+    "comments": [
+      "Uses two separate if statements instead of elif, which is harmless but slightly less efficient",
+      "Assumes the input string is a valid parentheses sequence; the index from enumerate is unused"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "151": {
+    "approach": [
+      "Trim leading and trailing spaces from s",
+      "Iterate characters of the trimmed string in reverse order",
+      "Accumulate non‑space characters on a stack until a space is seen",
+      "When a space is encountered, pop the stack to output the word in correct order and add a single space",
+      "After the loop, flush any remaining characters for the first word"
+    ],
+    "comments": [
+      "Handles multiple consecutive spaces by checking if the stack is empty; returns an empty string for input consisting only of spaces"
+    ],
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "1903": {
+    "approach": [
+      "Iterate while the string is non‑empty and its last digit is not odd",
+      "If the last digit is even, drop the last character using slicing",
+      "Return the resulting string (empty if no odd digit was found)"
+    ],
+    "comments": [
+      "Slicing creates a new string each loop, leading to O(n^2) time in the worst case",
+      "Handles empty input gracefully"
+    ],
+    "time": "O(n^2)",
+    "space": "O(n)"
+  },
+  "14": {
+    "approach": [
+      "Check for empty input list and return empty string if so",
+      "Initialize result list and index i to 0",
+      "Loop: if i reaches length of first string, return accumulated prefix",
+      "Take character x at position i of first string",
+      "Compare x with character at same position in each other string; if any string is shorter or mismatches, return prefix",
+      "If all match, append x to result and increment i"
+    ],
+    "comments": [
+      "Handles empty list and strings of varying lengths; builds prefix in a list before joining"
+    ],
+    "time": "O(n*m)",
+    "space": "O(m)"
+  },
+  "205": {
+    "approach": [
+      "Check if lengths differ and return False if so",
+      "Create two empty dictionaries for forward and reverse character mappings",
+      "Iterate over each index, retrieve characters a from s and b from t",
+      "If a already has a mapping, verify it matches b; otherwise return False",
+      "If a is new, ensure b is not already mapped to another character, then record both mappings",
+      "After processing all positions, return True"
+    ],
+    "comments": [
+      "Uses two hash maps to guarantee a one-to-one correspondence, preventing multiple s‑chars mapping to the same t‑char",
+      "Runs in O(n) time and O(k) extra space where k is the number of distinct characters"
+    ],
+    "time": "O(n)",
+    "space": "O(k)"
   }
 }
