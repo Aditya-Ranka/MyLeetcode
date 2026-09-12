@@ -1441,5 +1441,20 @@
     ],
     "time": "O(n)",
     "space": "O(k)"
+  },
+  "796": {
+    "approach": [
+      "Check if lengths differ and return false",
+      "If strings are empty return true",
+      "Gather indices i where s[i]==goal[0]",
+      "For each start index, walk through goal comparing s[(start+offset)%len(s)] to goal[offset]; if all match return true",
+      "Return false after all candidates fail"
+    ],
+    "comments": [
+      "Worst‑case time is O(n²) because each matching start may scan the whole string",
+      "Extra space O(n) for the list of candidate start positions"
+    ],
+    "time": "O(n^2)",
+    "space": "O(n)"
   }
 }

@@ -7,7 +7,7 @@ All the questions I go through and my approach and understanding of each problem
 - **Languages:** C++ & Python
 - **Structure:** organized by DSA topic
 - **Status:** Actively updating
-- **Total Solved:** 115
+- **Total Solved:** 116
 
 ---
 
@@ -108,6 +108,7 @@ All the questions I go through and my approach and understanding of each problem
 | 704 | Binary Search | Binary Search | Easy | C++ | [Link](04_Binary_Search/704_BinarySearch.cpp) |
 | 733 | Flood Fill | Arrays | Easy | Python | [Link](03_Arrays/733_FloodFill.py) |
 | 739 | Daily Temperatures | Stack and Queues | Medium | Python | [Link](09_Stack_and_Queues/739_DailyTemperatures.py) |
+| 796 | Rotate String | Strings | Easy | Python | [Link](05_Strings/796_RotateString.py) |
 | 875 | Koko Eating Bananas | Binary Search | Medium | Python | [Link](04_Binary_Search/875_KokoEatingBananas.py) |
 | 904 | Fruit Into Baskets | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/904_FruitIntoBaskets.py) |
 | 930 | Binary Subarrays With Sum | Sliding Window / Two Pointer | Medium | Python | [Link](10_Sliding_Window_Two_Pointer/930_BinarySubarraysWithSum.py) |
